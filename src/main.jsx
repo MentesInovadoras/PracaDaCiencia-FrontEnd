@@ -5,7 +5,7 @@ import WeekCalendar from './pages/WeekCalendar/index'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Home/>
-    {/* <WeekCalendar/> */}
+    {/* <Home/> */}
+    <WeekCalendar/>
   </StrictMode>
 )

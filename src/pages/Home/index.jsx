@@ -8,9 +8,8 @@ export default function Home() {
         <>
             <div id="background">
                 <div>
-                    {/* <img src={logo_desenho} alt="Logo" className="logo_desenho" /> */}
-                    {/* <img src={logo_texto} alt="Logo" className="logo_texto" /> */}
-                    <h1 className="logo">Logo da praça da ciência</h1>
+                    <img src={logo_desenho} alt="Logo" className="logo_desenho" />
+                    <img src={logo_texto} alt="Logo" className="logo_texto" />
                 </div>
                 <div className="box">
                     <div className="left">
