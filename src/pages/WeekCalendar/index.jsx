@@ -1,4 +1,4 @@
-import './styles.css';
+import '../WeekCalendar/styles.css';
 // import Logo from '../../components/LogoSide.jsx';
 import NumberTable from '../../components/NumberTable.jsx';
 import AvailableTimes from '../../components/AvailableTimes.jsx';
@@ -14,7 +14,7 @@ function App() {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title text-whidth="1px">Praça da Ciência</title>
   <link rel="stylesheet" href="styles/app.css" />
-  <div id="background">
+  <div id="weekBackground">
     <div id="week_page">
       <div id="logo_side">
         <img src={logo1} alt="Logo Da praça da Ciencia" id="logo"/>

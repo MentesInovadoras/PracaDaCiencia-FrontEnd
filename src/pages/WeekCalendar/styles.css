@@ -12,9 +12,15 @@ body{
     background-size:cover;
 }
 
-.backgroung{
-    width: 100vw;
+#weekBackground{
+    background-image: url('../images/img1.jpg');
+    background-blend-mode: darken;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-position: center;
+    background-position-x: -10px;
     height: 100vh;
+    width: 100vw;
 }
 
 #week_page{
@@ -32,17 +38,16 @@ h1{
     font-family: sans;
 }
 h2{
-    display: flex;
     font-size: 32px;
     text-transform: uppercase;
 }
 
 th{
-    font-size:larger;
+    font-size: x-large;
     height: 60px;
     width: 70px;
     font-style: italic;
-    font-size:x-large;
+
 }
 
 td{
