@@ -7,9 +7,9 @@ import Loading from './components/loading'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Loading/>
-    {/* <Home/> */}
-    <WeekCalendar/>
+    {/* <Loading/> */}
+    <Home/> 
+    {/* <WeekCalendar/> */}
     {/* <ADM/> */}
   </StrictMode>
 )
