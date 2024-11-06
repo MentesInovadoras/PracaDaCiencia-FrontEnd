@@ -6,7 +6,7 @@ export default function adm () {
     return (
     
 <>
-<body>
+<div className='bodyADM'>
 
     <aside className="sidebar">
         <div className="logo">
@@ -22,7 +22,7 @@ export default function adm () {
         
     </main>
 
-</body>   
+</div>   
 </>
 
 )
