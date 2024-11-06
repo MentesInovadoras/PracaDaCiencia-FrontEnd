@@ -14,11 +14,11 @@ export default function Home() {
                 <div className="box">
                     <div className="left">
                         <h1 id="left_box">Pessoa</h1>
-                        <h2 className="button">Agendamento Online</h2>
+                        <button className="button">Agendamento Online</button>
                     </div>
                     <div className="right">
                         <h1 id="right_box">Escolas, grupos ou instituições</h1>
-                        <h2 className="button">Agendamento Online</h2>
+                        <button className="button">Agendamento Online</button>
                     </div>
                 </div>
             </div>

@@ -57,17 +57,19 @@ h1, h2{
 }
 
 .button{
-    background-color: rgb(255, 211, 65);
-    margin-top: 55px;
+    background-color: rgb(236, 194, 56);
+    margin-top: 40px;
     border-radius: 60px;
     width: 90%;
     height: 90px;
-    left: 5%;
+    bottom: 3%;
     border: 1px solid rgb(0, 0, 0, 0.5);
 }
 
 
 #right_box, #left_box{
+    font-size: 40px;
+    align-items: center;
     height: 163px;
     top: 5%;
 }
