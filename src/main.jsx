@@ -10,6 +10,6 @@ createRoot(document.getElementById('root')).render(
     {/* <Loading/> */}
     {/* <Home/> */}
     {/* <WeekCalendar/> */}
-    {/* <ADM/> */}
+    <ADM/>
   </StrictMode>
 )
