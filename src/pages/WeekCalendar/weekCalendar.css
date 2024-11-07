@@ -42,7 +42,7 @@ h2{
     text-transform: uppercase;
 }
 
-th{
+#th{
     font-size: x-large;
     height: 60px;
     width: 70px;
@@ -50,7 +50,7 @@ th{
 
 }
 
-td{
+#td{
     border: 1px solid #ffffff;
     height: 60px;
     width: 60px;
@@ -60,7 +60,7 @@ td{
     cursor: pointer;
     transition: border 0.1s, background-color 0.2s;
 }
-td:hover{
+#td:hover{
     border: 3px solid rgba(255, 117, 1, 1); /* Borda mais grossa e visível */
     background-color: rgba(255, 117, 1, 0.1); /* Opcional: mudar o fundo para destacar */
 }

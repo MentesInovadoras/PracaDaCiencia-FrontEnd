@@ -73,12 +73,13 @@ export default function NumberTable() {
                 <tbody>
                     <tr>
                         {days.map((d, index) => (
-                            <th key={index}>{d.dayOfWeek}</th>
+                            <th className='th' key={index}>{d.dayOfWeek}</th>
                         ))}
                     </tr>
                     <tr>
                         {days.map((d, index) => (
-                            <td 
+                            <td
+                                id='td'
                                 key={index} 
                                 className={`${d.isPast || d.isMonday ? "disabled_day" : ""} ${selectedDate && selectedDate.getTime() === d.date.getTime() ? "selected_day" : ""}`}
                                 onClick={() => handleDayClick(d)}

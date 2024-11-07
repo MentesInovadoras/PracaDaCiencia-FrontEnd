@@ -21,11 +21,9 @@ export default function adm () {
             <button>Mensal</button>
         </div>
     </aside>
-    <main className='content'>
         {/* <Diario/> */}
         <Semanal/>
         {/* <Mensal/> */}
-    </main>
 
 </div>   
 </>

@@ -27,6 +27,7 @@ export default function AvailableTimes() {
                     <tr key={rowIndex}>
                         {row.map((time, index) => (
                             <td
+                                id='td'
                                 key={index}
                                 className={`available_hours ${selectedTime === time ? 'selected' : ''}`}
                                 onClick={() => handleTimeClick(time)}
