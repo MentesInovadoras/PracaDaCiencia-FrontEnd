@@ -1,4 +1,4 @@
-import '../WeekCalendar/styles.css';
+import './WeekCalendar.css';
 // import Logo from '../../components/LogoSide.jsx';
 import NumberTable from '../../components/NumberTable.jsx';
 import AvailableTimes from '../../components/AvailableTimes.jsx';

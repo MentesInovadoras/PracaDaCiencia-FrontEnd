@@ -1,0 +1,22 @@
+
+.data{
+    display: flex;
+}
+
+#prevDay, #nextDay, .ADM_selected_day{
+    margin: 0 4vw;
+}
+
+.cardADM{
+    display: grid;
+    align-self:flex-start;
+    justify-self: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+    top: 10vh;
+    width: 500px;
+    height: 200px;
+}

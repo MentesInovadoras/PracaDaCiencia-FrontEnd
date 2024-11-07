@@ -1,4 +1,4 @@
-import './styles.css';
+import './home.css';
 import logo_desenho from '../images/logo_desenho.png';
 import logo_texto from '../images/logo_texto.png';
 import background from '../images/img1.jpg';
