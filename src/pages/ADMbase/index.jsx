@@ -6,7 +6,7 @@ import Semanal from '../ADMsemanal/index.jsx';
 import Mensal from '../ADMmensal/index.jsx';
 
 export default function Adm() {
-    const [activeComponent, setActiveComponent] = useState('Mensal');
+    const [activeComponent, setActiveComponent] = useState('Diario');
 
     return (
         <>

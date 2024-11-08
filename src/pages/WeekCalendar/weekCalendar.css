@@ -145,7 +145,7 @@ h2{
     background-color: rgba(255, 117, 1, 0.1); /* Opcional: mudar o fundo para destacar */
 }
 
-table {
+#week_side table, #variable_hours table{
     display: flex;
     border-spacing: 12px 3px;
 }
