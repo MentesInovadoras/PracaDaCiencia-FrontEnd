@@ -12,11 +12,41 @@ export default function diario(){
         <h1 className='ADM_selected_day'>Dia atual</h1>
         <button id="nextDay">&gt;</button>
     </div>
-    <div className='cardADM'>
-        <h1>card1</h1>
-        <h1>card2</h1>
-        <h1>card3</h1>
-        <h1>card4</h1>
+    <div className='cardConteiner'>
+        <div className="cardDiario">
+            <h1 className="dataAgendamento">DD/MM/AAAA</h1>
+            <h1 className="horaAgendamento">HH:MM</h1>
+            <h1 className="responsavelAgendamentoTitle">Responsável: </h1>
+            <h1 className="responsavelAgendamento">"Nome Sobrenome"</h1>
+            <h1 className="visitanteAgendamentoTitle">Visitante/Instituição: </h1>
+            <h1 className="visitanteAgendamento">"Nome Sobrenome"</h1>
+        </div>
+        <div className="card">
+        <h1 className="dataAgendamento">DD/MM/AAAA</h1>
+            <h1 className="horaAgendamento">HH:MM</h1>
+            <h1 className="responsavelAgendamentoTitle">Responsável: </h1>
+            <h1 className="responsavelAgendamento">"Nome Sobrenome"</h1>
+            <h1 className="visitanteAgendamentoTitle">Visitante/Instituição: </h1>
+            <h1 className="visitanteAgendamento">"Nome Sobrenome"</h1>
+        </div>
+        <div className="card">
+        <h1 className="dataAgendamento">DD/MM/AAAA</h1>
+            <h1 className="horaAgendamento">HH:MM</h1>
+            <h1 className="responsavelAgendamentoTitle">Responsável: </h1>
+            <h1 className="responsavelAgendamento">"Nome Sobrenome"</h1>
+            <h1 className="visitanteAgendamentoTitle">Visitante/Instituição: </h1>
+            <h1 className="visitanteAgendamento">"Nome Sobrenome"</h1>
+        </div>
+        <div className="card">
+        <h1 className="dataAgendamento">DD/MM/AAAA</h1>
+            <h1 className="horaAgendamento">HH:MM</h1>
+            <h1 className="responsavelAgendamentoTitle">Responsável: </h1>
+            <h1 className="responsavelAgendamento">"Nome Sobrenome"</h1>
+            <h1 className="visitanteAgendamentoTitle">Visitante/Instituição: </h1>
+            <h1 className="visitanteAgendamento">"Nome Sobrenome"</h1>
+        </div>
+        
+
     </div>
 </main>
 </>
