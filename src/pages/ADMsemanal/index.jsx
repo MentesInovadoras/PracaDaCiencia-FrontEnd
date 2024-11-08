@@ -14,12 +14,22 @@ export default function semanal(){
             <th>Status</th>
         </tr>
         <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
+            <td>DD/MM</td>
+            <td>HH/MM</td>
+            <td>Primeiro Nome</td>
+            <td>IFES campus Serra</td>
+            <td>Roteiro</td>
+            <td>A Confirmar</td>
+            <td className='trash'>lixeira</td>
+        </tr>
+        <tr>
+            <td>a</td>
+            <td>b</td>
+            <td>c</td>
+            <td>d</td>
+            <td>e</td>
+            <td>f</td>
+            <td className='trash'>lixeira</td>
         </tr>
     </table>
 </main>
