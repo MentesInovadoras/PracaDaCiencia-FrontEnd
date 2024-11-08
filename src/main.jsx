@@ -9,7 +9,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <Loading/> */}
     {/* <Home/> */}
-    {/* <WeekCalendar/> */}
-    <ADM/>
+    <WeekCalendar/>
+    {/* <ADM/> */}
   </StrictMode>
 )
