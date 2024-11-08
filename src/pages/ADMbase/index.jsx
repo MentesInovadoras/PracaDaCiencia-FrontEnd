@@ -22,9 +22,9 @@ export default function adm () {
         </div>
     </aside>
         {/* <Diario/> */}
-        <Semanal/>
-        {/* <Mensal/> */}
-
+        {/* <Semanal/> */}
+        <Mensal/>
+   
 </div>   
 </>
 
