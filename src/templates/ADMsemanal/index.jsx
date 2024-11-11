@@ -1,0 +1,38 @@
+import './ADMsemanal.css'
+
+export default function semanal(){
+    return(
+    <>
+<main className='semanalTable'>
+    <table className=''>
+        <tr>
+            <th>Data</th>
+            <th>Hora</th>
+            <th>Responsável</th>
+            <th>Instituição</th>
+            <th>Roteiro</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>DD/MM</td>
+            <td>HH/MM</td>
+            <td>Primeiro Nome</td>
+            <td>IFES campus Serra</td>
+            <td>Roteiro</td>
+            <td>A Confirmar</td>
+            <td className='trash'>lixeira</td>
+        </tr>
+        <tr>
+            <td>a</td>
+            <td>b</td>
+            <td>c</td>
+            <td>d</td>
+            <td>e</td>
+            <td>f</td>
+            <td className='trash'>lixeira</td>
+        </tr>
+    </table>
+</main>
+    </>
+    )
+}

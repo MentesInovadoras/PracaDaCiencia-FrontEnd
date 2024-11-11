@@ -1,0 +1,60 @@
+/* Estilos existentes */
+.data {
+    display: flex;
+}
+
+#prevDay, #nextDay, .ADM_selected_day {
+    margin: 0 4vw;
+}
+
+.cardConteiner {
+    display: grid;
+    align-self: flex-start;
+    justify-self: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+    top: 10vh;
+    width: 500px;
+    height: 200px;
+}
+
+.content {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    gap: 10px;
+}
+
+/* Novos estilos */
+.cardDiario, .card {
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dataAgendamento, .horaAgendamento, .responsavelAgendamentoTitle, .responsavelAgendamento, .visitanteAgendamentoTitle, .visitanteAgendamento {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.dataAgendamento {
+    font-weight: bold;
+}
+
+.horaAgendamento {
+    color: #555;
+}
+
+.responsavelAgendamentoTitle, .visitanteAgendamentoTitle {
+    font-weight: bold;
+    color: #333;
+}
+
+.responsavelAgendamento, .visitanteAgendamento {
+    color: #777;
+}
