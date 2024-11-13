@@ -1,0 +1,7 @@
+//Esse arquivo é:
+//-Para o Docker entender React (@babel/preset-react) no .jsx
+//-Para retrocompatibilidade com versões mais antigas do JavaScript (@babel/preset-env)
+{
+    "presets": ["@babel/preset-env", "@babel/preset-react"]
+  }
+  

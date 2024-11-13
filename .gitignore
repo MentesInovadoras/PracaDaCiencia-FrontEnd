@@ -24,4 +24,3 @@ dist-ssr
 *.sw?
 .vite/
 .venv/
-welcome-to-docker/

@@ -1,0 +1,42 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./PracaDaCiencia-FrontEnd
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./PracaDaCiencia-FrontEnd:/app
+    environment:
+      - CHOKIDAR_USEPOLLING=true # Necessário para reflexões de arquivo no Docker em algumas plataformas
+
+  backend:
+    build:
+      context: ./PracaDaCiencia-BackEnd
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./PracaDaCiencia-BackEnd:/app
+    depends_on:
+      - db
+    environment:
+      - POSTGRES_DB=mydatabase
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mypassword
+      - POSTGRES_HOST=172.19.108.24
+      - POSTGRES_PORT=5432
+
+  db:
+    image: postgres:latest
+    environment:
+      - POSTGRES_DB=mydatabase
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mypassword
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - my-db:/var/lib/postgresql/data
+
+volumes:
+  my-db:

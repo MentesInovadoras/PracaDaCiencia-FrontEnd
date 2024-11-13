@@ -1,20 +1,18 @@
-# Step 1: Use an official Node.js runtime as a base image
-FROM node:14
+# Use a imagem base do Node.js
+FROM node:20.11.0
 
-# Step 2: Set the working directory in the container
-WORKDIR /app
+# Define o diretório de trabalho no container
+WORKDIR /
 
-# Step 3: Copy package.json and package-lock.json into the container
-COPY package*.json ./
-
-# Step 4: Install dependencies
+# Copia o package.json e instala as dependências
+COPY package.json ./
 RUN npm install
 
-# Step 5: Copy the rest of the application files
+# Copia todos os arquivos para o diretório de trabalho
 COPY . .
 
-# Step 6: Expose the port your site runs on
+# Expõe a porta que o frontend irá rodar
 EXPOSE 3000
 
-# Step 7: Specify the command to run your app
+# Comando para rodar a aplicação
 CMD ["npm", "start"]
