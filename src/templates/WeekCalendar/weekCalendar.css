@@ -8,9 +8,7 @@
     position: relative;
     text-align: center;
 }
-.body{
-    background-size:cover;
-}
+
 
 #weekBackground{
     background-image: url('../images/img1.jpg');
@@ -18,7 +16,6 @@
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.3);
     background-position: center;
-    background-position-x: -10px;
     height: 100vh;
     width: 100vw;
 }
@@ -47,6 +44,7 @@ div table h2{
     height: 60px;
     width: 70px;
     font-style: italic;
+    padding-top: 30px;
 
 }
 
@@ -56,7 +54,7 @@ div table h2{
     width: 60px;
     font-size:xx-large;
     padding: 10px;
-    border-radius: 50%;
+    border-radius: 30px;
     cursor: pointer;
     transition: border 0.1s, background-color 0.2s;
 }
@@ -127,6 +125,7 @@ div table h2{
 
 #available_times {
     padding: 20px;
+    padding-top: 75px;
 }
 
 .available_hours {

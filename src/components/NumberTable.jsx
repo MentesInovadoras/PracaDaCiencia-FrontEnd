@@ -73,7 +73,7 @@ export default function NumberTable() {
                 <tbody>
                     <tr>
                         {days.map((d, index) => (
-                            <th className='th' key={index}>{d.dayOfWeek}</th>
+                            <th id='th' key={index}>{d.dayOfWeek}</th>
                         ))}
                     </tr>
                     <tr>
