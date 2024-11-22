@@ -1,10 +1,10 @@
-import './ADMsemanal.css'
+import styles from './ADMsemanal.module.css'
 
 export default function semanal(){
     return(
     <>
-<main className='semanalTable'>
-    <table className=''>
+<main className={styles.semanalTable}>
+    <table>
         <tr>
             <th>Data</th>
             <th>Hora</th>
@@ -20,7 +20,7 @@ export default function semanal(){
             <td>IFES campus Serra</td>
             <td>Roteiro</td>
             <td>A Confirmar</td>
-            <td className='trash'>lixeira</td>
+            <td className={styles.trash}>lixeira</td>
         </tr>
         <tr>
             <td>a</td>
@@ -29,7 +29,7 @@ export default function semanal(){
             <td>d</td>
             <td>e</td>
             <td>f</td>
-            <td className='trash'>lixeira</td>
+            <td className={styles.trash}>lixeira</td>
         </tr>
     </table>
 </main>

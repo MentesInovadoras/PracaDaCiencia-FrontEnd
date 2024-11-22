@@ -2,8 +2,8 @@ import './WeekCalendar.css';
 // import Logo from '../../components/LogoSide.jsx';
 import NumberTable from '../../components/NumberTable.jsx';
 import AvailableTimes from '../../components/AvailableTimes.jsx';
-import logo1 from '../images/logo_original.png'
-import prefeitura_vitoria from '../images/prefeitura_vitoria.png'
+import logo1 from '../images/logo_original.png';
+import prefeitura_vitoria from '../images/prefeitura_vitoria.png';
 
 
 function App() {

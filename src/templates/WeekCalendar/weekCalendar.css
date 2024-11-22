@@ -8,7 +8,7 @@
     position: relative;
     text-align: center;
 }
-body{
+.body{
     background-size:cover;
 }
 
@@ -33,11 +33,11 @@ body{
     top: 15%;
 
 }
-h1{
+div table h1{
     font-size: 48px;
     font-family: sans;
 }
-h2{
+div table h2{
     font-size: 32px;
     text-transform: uppercase;
 }

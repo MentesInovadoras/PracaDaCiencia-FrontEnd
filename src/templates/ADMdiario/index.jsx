@@ -1,54 +1,49 @@
-import './ADMdiario.css'
+import styles from './ADMdiario.module.css'
 
-
-
-
-export default function diario(){
-    return(
-<>
-<main className='content'>
-    <div className='data'>
-        <button id="prevDay">&lt;</button>
-        <h1 className='ADM_selected_day'>Dia atual</h1>
-        <button id="nextDay">&gt;</button>
-    </div>
-    <div className='cardConteiner'>
-        <div className="cardDiario">
-            <h1 className="dataAgendamento">DD/MM/AAAA</h1>
-            <h1 className="horaAgendamento">HH:MM</h1>
-            <h1 className="responsavelAgendamentoTitle">Responsável: </h1>
-            <h1 className="responsavelAgendamento">"Nome Sobrenome"</h1>
-            <h1 className="visitanteAgendamentoTitle">Visitante/Instituição: </h1>
-            <h1 className="visitanteAgendamento">"Nome Sobrenome"</h1>
+export default function Diario() {
+  return (
+    <>
+      <main className={styles.content}>
+        <div className={styles.data}>
+          <button id="prevDay">&lt;</button>
+          <h1 className={styles.ADM_selected_day}>Dia atual</h1>
+          <button id="nextDay">&gt;</button>
         </div>
-        <div className="card">
-        <h1 className="dataAgendamento">DD/MM/AAAA</h1>
-            <h1 className="horaAgendamento">HH:MM</h1>
-            <h1 className="responsavelAgendamentoTitle">Responsável: </h1>
-            <h1 className="responsavelAgendamento">"Nome Sobrenome"</h1>
-            <h1 className="visitanteAgendamentoTitle">Visitante/Instituição: </h1>
-            <h1 className="visitanteAgendamento">"Nome Sobrenome"</h1>
+        <div className={styles.cardConteiner}>
+          <div className={styles.cardDiario}>
+            <h1 className={styles.dataAgendamento}>DD/MM/AAAA</h1>
+            <h1 className={styles.horaAgendamento}>HH:MM</h1>
+            <h1 className={styles.responsavelAgendamentoTitle}>Responsável:</h1>
+            <h1 className={styles.responsavelAgendamento}>"Nome Sobrenome"</h1>
+            <h1 className={styles.visitanteAgendamentoTitle}>Visitante/Instituição:</h1>
+            <h1 className={styles.visitanteAgendamento}>"Nome Sobrenome"</h1>
+          </div>
+          <div className={styles.card}>
+            <h1 className={styles.dataAgendamento}>DD/MM/AAAA</h1>
+            <h1 className={styles.horaAgendamento}>HH:MM</h1>
+            <h1 className={styles.responsavelAgendamentoTitle}>Responsável:</h1>
+            <h1 className={styles.responsavelAgendamento}>"Nome Sobrenome"</h1>
+            <h1 className={styles.visitanteAgendamentoTitle}>Visitante/Instituição:</h1>
+            <h1 className={styles.visitanteAgendamento}>"Nome Sobrenome"</h1>
+          </div>
+          <div className={styles.card}>
+            <h1 className={styles.dataAgendamento}>DD/MM/AAAA</h1>
+            <h1 className={styles.horaAgendamento}>HH:MM</h1>
+            <h1 className={styles.responsavelAgendamentoTitle}>Responsável:</h1>
+            <h1 className={styles.responsavelAgendamento}>"Nome Sobrenome"</h1>
+            <h1 className={styles.visitanteAgendamentoTitle}>Visitante/Instituição:</h1>
+            <h1 className={styles.visitanteAgendamento}>"Nome Sobrenome"</h1>
+          </div>
+          <div className={styles.card}>
+            <h1 className={styles.dataAgendamento}>DD/MM/AAAA</h1>
+            <h1 className={styles.horaAgendamento}>HH:MM</h1>
+            <h1 className={styles.responsavelAgendamentoTitle}>Responsável:</h1>
+            <h1 className={styles.responsavelAgendamento}>"Nome Sobrenome"</h1>
+            <h1 className={styles.visitanteAgendamentoTitle}>Visitante/Instituição:</h1>
+            <h1 className={styles.visitanteAgendamento}>"Nome Sobrenome"</h1>
+          </div>
         </div>
-        <div className="card">
-        <h1 className="dataAgendamento">DD/MM/AAAA</h1>
-            <h1 className="horaAgendamento">HH:MM</h1>
-            <h1 className="responsavelAgendamentoTitle">Responsável: </h1>
-            <h1 className="responsavelAgendamento">"Nome Sobrenome"</h1>
-            <h1 className="visitanteAgendamentoTitle">Visitante/Instituição: </h1>
-            <h1 className="visitanteAgendamento">"Nome Sobrenome"</h1>
-        </div>
-        <div className="card">
-        <h1 className="dataAgendamento">DD/MM/AAAA</h1>
-            <h1 className="horaAgendamento">HH:MM</h1>
-            <h1 className="responsavelAgendamentoTitle">Responsável: </h1>
-            <h1 className="responsavelAgendamento">"Nome Sobrenome"</h1>
-            <h1 className="visitanteAgendamentoTitle">Visitante/Instituição: </h1>
-            <h1 className="visitanteAgendamento">"Nome Sobrenome"</h1>
-        </div>
-        
-
-    </div>
-</main>
-</>
-);
+      </main>
+    </>
+  );
 }
