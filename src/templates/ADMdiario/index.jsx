@@ -10,7 +10,7 @@ export default function Diario() {
           <button id="nextDay">&gt;</button>
         </div>
         <div className={styles.cardConteiner}>
-          <div className={styles.cardDiario}>
+          <div className={styles.card}>
             <h1 className={styles.dataAgendamento}>DD/MM/AAAA</h1>
             <h1 className={styles.horaAgendamento}>HH:MM</h1>
             <h1 className={styles.responsavelAgendamentoTitle}>Responsável:</h1>
