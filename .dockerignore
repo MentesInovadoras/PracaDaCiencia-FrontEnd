@@ -1,4 +1,0 @@
-//Documento para evitar que o docker virtualize esses arquivos
-.venv
-.gitignore
-.node_modules
