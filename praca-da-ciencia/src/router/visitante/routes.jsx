@@ -1,15 +1,11 @@
 import BaseRoutes from "./base";
-import { Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 const VisitanteRoutes = () =>
 {
     return (
-        <>
-            <Route path="/visitante">
-                <Route element={<BaseRoutes />} />
-            </Route>
-        </>
+        <Route index element={<h1>Visitantes</h1>}></Route>
     );
-};
+}
 
 export default VisitanteRoutes;

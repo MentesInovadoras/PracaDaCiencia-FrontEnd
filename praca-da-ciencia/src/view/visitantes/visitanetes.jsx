@@ -1,3 +1,7 @@
+import React from "react";
+import './visitantes.css';
+
+
 const VisitanteHomePage = () =>
 {
     return (
@@ -9,3 +13,6 @@ const VisitanteHomePage = () =>
 }
 
 export default VisitanteHomePage;
+
+
+

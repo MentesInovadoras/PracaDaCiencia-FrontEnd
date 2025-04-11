@@ -1,15 +1,15 @@
 import React from "react";
-import './gestao.css';
+import './mensal.css';
 
-
-const GestaoHomePage = () =>
-{
+const MensalHomePage = () => {
+    
     return (
         <div>
-            <h1>Gestao Home Page</h1>
+            <h1>Mensal Home Page</h1>
             <p>Welcome to the Visitante section of the application.</p>
         </div>
     );
+
 }
 
-export default GestaoHomePage;
+export default MensalHomePage;

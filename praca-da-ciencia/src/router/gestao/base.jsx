@@ -1,13 +1,17 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
+import GestaoHomePage from '../../view/gestao/gestao.jsx';
 
-import GestaoHomePage from '../../view/gestao/gestao';
-
-const BaseRoutes = () =>
+const GestsaoHomePage = () =>
 {
-    return (
-        <Route key="GestaoHomePage" path="/HomePage" element={<GestaoHomePage />} />
-    );
-};
+    return(
+        <Routes>
+            <Route key= "GestaoHomePage" path="/HomePage" element={<GestaoHomePage />} />
+        </Routes>
 
-export default BaseRoutes;
+    );
+    
+  
+}
+
+export default GestaoHomePage;
