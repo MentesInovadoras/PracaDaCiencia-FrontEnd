@@ -1,14 +1,14 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
-import DiarioHomePage from '../../view/diario/diario.jsx';
+import Diario from '../../view/diario/diario.jsx';
 
-const DiarioHomePage = () => {
+const Diario = () => {
     return(
         <Routes>
-            <Route key= "DiarioHomePage" path="/HomePage" element={<DiarioHomePage />} />
+            <Route key= "Diario" path="/HomePage" element={<Diario />} />
         </Routes>
 
     )
 }
 
-export default DiarioHomePage;
+export default Diario;

@@ -1,7 +1,7 @@
 import React from "react";
 import './loguin.css';
 
-const LoginHomePage = () => {
+const Login = () => {
     return(
         <div>
             <h1>Loguin Home Page</h1>
@@ -10,4 +10,4 @@ const LoginHomePage = () => {
     )
 
 }
-export default LoginHomePage;
+export default Login;

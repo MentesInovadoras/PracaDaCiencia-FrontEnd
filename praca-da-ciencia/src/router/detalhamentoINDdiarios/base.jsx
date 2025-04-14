@@ -1,15 +1,15 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
-import INDdiariosHomePage from '../../view/detalhamentoINDdiarios/detalhamentoinddiarios.jsx';
+import INDdiarios from '../../view/detalhamentoINDdiarios/detalhamentoinddiarios.jsx';
 
-const INDdiariosHomePage = () => {
+const INDdiarios = () => {
     return(
         <Routes>
-            <Route key= "INDdiariosHomePage" path="/HomePage" element={<INDdiariosHomePage/>} />
+            <Route key= "INDdiarios" path="/HomePage" element={<INDdiarios/>} />
         </Routes>
 
     );
 
 }
 
-export default INDdiariosHomePage;
+export default INDdiarios;

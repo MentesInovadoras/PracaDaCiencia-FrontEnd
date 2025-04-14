@@ -1,7 +1,7 @@
 import React from "react";
 import './semanal.css';
 
-const SemanalHomePage = () => {
+const Semanal = () => {
     return (
         <div>
             <h1>Semanal Home Page</h1>
@@ -10,4 +10,4 @@ const SemanalHomePage = () => {
     );
 
 }
-export default SemanalHomePage;
+export default Semanal;

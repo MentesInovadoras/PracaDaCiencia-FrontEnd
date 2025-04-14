@@ -1,15 +1,15 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
-import VisitanteHomePage from '../../view/visitantes/visitanetes.jsx';
+import Visitante from '../../view/visitantes/visitanetes.jsx';
 
-const VisitanteHomePage = () => {
+const Visitante = () => {
   return (
     <Routes>
-      <Route key="VisitanteHomePage" path="/HomePage" element={<VisitanteHomePage />} />
+      <Route key="Visitante" path="/HomePage" element={<Visitante />} />
     </Routes>
   );
 }
   
 
-export default VisitanteHomePage;
+export default Visitante;

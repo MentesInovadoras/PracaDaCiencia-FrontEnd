@@ -1,4 +1,4 @@
-import GestaoHomePage from "./base";
+import Diario from "./base";
 import { Route, Routes} from 'react-router-dom'; 
 
 const DiarioRoutes = () => {

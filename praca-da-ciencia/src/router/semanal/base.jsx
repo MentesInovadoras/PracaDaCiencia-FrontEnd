@@ -1,15 +1,15 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
-import SemanalHomePage from '../../view/semanal/semanal.jsx';
+import Semanal from '../../view/semanal/semanal.jsx';
 
-const SemanalHomePage = () =>{
+const Semanal = () =>{
     return(
         <Routes>
-            <Route key= "SemanalHomePage" path="/HomePage" element={<SemanalHomePage />} />
+            <Route key= "Semanal" path="/HomePage" element={<Semanal />} />
         </Routes>
 
     );
 
 }
 
-export default SemanalHomePage;
+export default Semanal;

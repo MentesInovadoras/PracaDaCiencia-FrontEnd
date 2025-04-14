@@ -1,7 +1,7 @@
 import React from "react";
 import './mensal.css';
 
-const MensalHomePage = () => {
+const Mensal = () => {
     
     return (
         <div>
@@ -12,4 +12,4 @@ const MensalHomePage = () => {
 
 }
 
-export default MensalHomePage;
+export default Mensal;

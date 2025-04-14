@@ -1,14 +1,13 @@
 import React from "react";
-import './diario.css';
+import './detalhamentogrpmensal.css';
 
-const Diario = () =>{
+const GRPmensal = () => {
     return (
         <div>
-            <h1>Diario Home Page</h1>
+            <h1>Detalhamento Grupo Mnesal Home Page</h1>
             <p>Welcome to the Visitante section of the application.</p>
         </div>
     );
-
 }
 
-export default Diario;
+export default GRPmensal;

@@ -1,15 +1,15 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
-import MensalHomePage from '../../view/mensal/mensal.jsx';
+import Mensal from '../../view/mensal/mensal.jsx';
 
-const MensalHomePage = () => {
+const Mensal = () => {
     return(
         <Routes>
-            <Route key= "MensalHomePage" path="/HomePage" element={<MensalHomePage />} />
+            <Route key= "Mensal" path="/HomePage" element={<Mensal />} />
         </Routes>
 
     );
     
 
 }
-export default MensalHomePage;
+export default Mensal;

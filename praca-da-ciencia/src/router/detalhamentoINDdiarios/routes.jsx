@@ -1,4 +1,4 @@
-import INDdiariosHomePage from "./base";
+import INDdiarios from "./base";
 import { Route, Routes } from "react-router-dom";
 
 const INDdiariosRoutes = () => {

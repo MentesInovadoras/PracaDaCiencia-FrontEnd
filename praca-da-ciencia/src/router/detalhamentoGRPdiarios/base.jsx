@@ -1,14 +1,14 @@
 import React from "react";
 import {Route} from 'react-router-dom';
-import GRPdiariosHomePage from  '../../view/detalhamentoGRPdiarios/detalhamentogrpdiarios.jsx';
+import GRPdiarios from  '../../view/detalhamentoGRPdiarios/detalhamentogrpdiarios.jsx';
 
-const GRPdiariosHomePage = () => {
+const GRPdiarios = () => {
     return(
         <Routes>
-            <Route key= "GRPdiariosHomePage" path="/HomePage" element={<GRPdiariosHomePage />} />
+            <Route key= "GRPdiarios" path="/HomePage" element={<GRPdiarios />} />
         </Routes>
 
     );
 
 }
-export default GRPdiariosHomePage;
+export default GRPdiarios;

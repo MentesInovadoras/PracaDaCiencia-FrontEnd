@@ -1,7 +1,7 @@
 import React from "react";
 import './detalhamentoinddiarios.css';
 
-const INDdiariosHomePage = () => {
+const INDdiarios = () => {
     return (
         <div>
             <h1>Detalhamento Individual Diarios Home Page</h1>
@@ -11,4 +11,4 @@ const INDdiariosHomePage = () => {
 
 }
 
-export default INDdiariosHomePage;
+export default INDdiarios;

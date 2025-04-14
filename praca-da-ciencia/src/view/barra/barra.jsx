@@ -1,14 +1,12 @@
 import React from "react";
-import './diario.css';
+import './barra.css';
 
-const Diario = () =>{
+const Barra = () => {
     return (
         <div>
-            <h1>Diario Home Page</h1>
+            <h1>Home Page</h1>
             <p>Welcome to the Visitante section of the application.</p>
         </div>
     );
-
 }
-
-export default Diario;
+export default Barra;

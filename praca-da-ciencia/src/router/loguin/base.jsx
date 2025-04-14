@@ -2,13 +2,13 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 
-const LoginHomePage = () => {
+const Login = () => {
     return(
 
         <Routes>
-            <Route key= "LoginHomePage" path="/HomePage" element={<loginHomePage/>}/>
+            <Route key= "Login" path="/HomePage" element={<login/>}/>
         </Routes>
     )
 }
 
-export default LoginHomePage;
+export default Login;

@@ -2,7 +2,7 @@ import React from "react";
 import './gestao.css';
 
 
-const GestaoHomePage = () =>
+const Gestao = () =>
 {
     return (
         <div>
@@ -12,4 +12,4 @@ const GestaoHomePage = () =>
     );
 }
 
-export default GestaoHomePage;
+export default Gestao;

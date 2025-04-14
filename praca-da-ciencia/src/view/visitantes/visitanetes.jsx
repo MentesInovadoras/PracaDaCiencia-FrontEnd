@@ -2,7 +2,7 @@ import React from "react";
 import './visitantes.css';
 
 
-const VisitanteHomePage = () =>
+const Visitante = () =>
 {
     return (
         <div>
@@ -12,7 +12,7 @@ const VisitanteHomePage = () =>
     );
 }
 
-export default VisitanteHomePage;
+export default Visitante;
 
 
 

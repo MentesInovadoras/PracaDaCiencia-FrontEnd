@@ -1,4 +1,4 @@
-import MensalHomePage from "./base";
+import Mensal from "./base";
 import { Route, Routes } from "react-router-dom";
 
 const MensalRoutes = () => {

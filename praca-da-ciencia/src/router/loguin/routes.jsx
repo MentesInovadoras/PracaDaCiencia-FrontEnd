@@ -1,4 +1,4 @@
-import LoginHomePage from "./base";
+import Login from "./base";
 import { Route, Routes } from "react-router-dom";
 
 const LoginRoutes = () => {

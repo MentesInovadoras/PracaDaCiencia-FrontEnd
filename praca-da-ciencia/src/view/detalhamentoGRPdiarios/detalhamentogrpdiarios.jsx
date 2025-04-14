@@ -1,7 +1,7 @@
 import React from "react";
 import './detalhamentogrpdiarios.css';
 
-const GRPdiariosHomePage = () => {
+const GRPdiarios = () => {
     return (
         <div>
             <h1>Detalhamento de agendamentos em grupos diarios Home Page</h1>
@@ -11,4 +11,4 @@ const GRPdiariosHomePage = () => {
 
 }
 
-export default GRPdiariosHomePage;
+export default GRPdiarios;
