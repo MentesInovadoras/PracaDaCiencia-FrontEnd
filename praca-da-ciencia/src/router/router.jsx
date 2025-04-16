@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Visitante from '../view/visitantes/visitanetes.jsx';
 import Gestao from '../view/gestao/gestao.jsx';
-import Login from '../view/loguin/loguin.jsx';
+import Login from '../view/login/login.jsx';
 import Diario from '../view/diario/diario.jsx';
 import Semanal from '../view/semanal/semanal.jsx';
 import Mensal from '../view/mensal/mensal.jsx';
@@ -33,6 +33,7 @@ export default function AppRouter() {
         <Route path="gruposdiario" element={< GRPdiarios/>} />
         <Route path="instituicaodiario" element={< INSTdiarios/>} />
         <Route path="individualmensal" element={< INDMensal/>} />
+        <Route path="institutomensal" element={< INSTmensal/>} />
         <Route path="grupomensal" element={< GRPmensal/>} />
         <Route path="*" element={< Erro/>} />
        

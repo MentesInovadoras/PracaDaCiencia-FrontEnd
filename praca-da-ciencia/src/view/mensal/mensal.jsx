@@ -5,8 +5,18 @@ const Mensal = () => {
     
     return (
         <div>
-            <h1>Mensal Home Page</h1>
-            <p>Welcome to the Visitante section of the application.</p>
+            <header>
+                <h1>imagem1</h1>
+                <nav>
+                <a href="diario"><button>diario</button></a>
+                <a href="semanal"><button>semanal</button></a>
+                <a href="mensal"><button>mensal</button></a>
+                <a href="visitantes"><button>voltar</button></a>
+
+                </nav>
+                
+               
+            </header>
         </div>
     );
 
