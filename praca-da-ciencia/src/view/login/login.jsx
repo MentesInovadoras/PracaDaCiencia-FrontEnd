@@ -1,23 +1,41 @@
 import React from "react";
 import './login.css';
+import logo_praca from "../../router/image/pracaCIENCIA.png";
+import logo_prefeitura from '../../router/image/logo_prefeitura_vitoria.png'
 
 export default function Login (){
     return(
         <>
         <div>
             <header>
-                <h1>imagem 1</h1>
-                <h1>imagem 2</h1>
+                <div id="pracaCiencia">
+                    <img src={logo_praca} alt="logo" />  
+                </div>
+
+                <div id="prefeituradeVitoria">
+                    <img src={logo_prefeitura} alt="" />
+                   
+                </div>
+                
+                
             </header>
             <div id="content">
                 <div className="validation">
                     <h2>Login</h2>
-                    <input type="text" required placeholder="insira seu email"/>
+                    <div id="inputLogin">
+                        <input type="text" required placeholder="insira seu email"/>
+                    </div>
                     <h2>Senha</h2>
-                    <input type="password" required placeholder="Insira sua senha"/>
+                    <div id="inputSenha">
+                        <input type="password" required placeholder="Insira sua senha"/>   
+                    </div>
+                    
                     <br/>
                     <br/>
-                    <button type="submit">Entrar</button>
+                    <div id="botaoAcessar">
+                    <button type="submit">acessar</button>
+                    </div>
+                    
                 </div>
             </div>
         </div>
