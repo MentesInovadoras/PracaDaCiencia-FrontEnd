@@ -17,8 +17,9 @@ export default function Navbar() {
             url: '/contato',
             label: 'Contato',
         },
-    ] 
+    ]
 
+    const [openMenu, setOpenMenu] = React.useState<boolean>(false);
 
     return (
         <header id='navbar'>
@@ -28,12 +29,14 @@ export default function Navbar() {
                         src={logo}
                         alt="Praça da Ciência" />
                 </a>
-                <div className='mobileMenu'>
-                    <div className='line1'></div>
-                    <div className='line2'></div>
-                    <div className='line3'></div>
+                <div className={`mobileMenu ${openMenu ? 'active' : ''}`} onClick={() => setOpenMenu(!openMenu)}>
+                    <a>
+                        <div className='line1'></div>
+                        <div className='line2'></div>
+                        <div className='line3'></div>
+                    </a>
                 </div>
-                <ul className='navItens'>
+                <ul className="navItens" id={openMenu ? 'active' : ''}>
                     {items.map((item, index) => (
                         <NavItem
                             key={index}
@@ -41,9 +44,14 @@ export default function Navbar() {
                             label={item.label}
                         />
                     ))}
+                    <li className="navItem">
+                        <a href="/" className="navLink">
+                            Sou técnico
+                        </a>
+                    </li>
                 </ul>
 
-                <button className='btnLogin'>Sou Técnico</button>
+
             </nav>
         </header>
     );
