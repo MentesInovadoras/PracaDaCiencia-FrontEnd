@@ -1,4 +1,4 @@
-#errorPage{
+#errorPage {
     min-width: 100%;
     min-height: 100vh;
     display: flex;
@@ -8,41 +8,42 @@
     gap: 20px;
     background-color: var(--dark-mode-main-color);
     color-scheme: dark;
-}
 
-#errorPage button{
-    padding: 10px;
-    padding-inline: 15px;
-    cursor: pointer;
-    justify-self:baseline;
-    border-radius: 20px;
-}
+    button {
+        padding: 10px;
+        padding-inline: 15px;
+        cursor: pointer;
+        justify-self: baseline;
+        border-radius: 20px;
+    }
 
-#errorPage h2,#errorPage h1{
-    color: white;
-}
+    h2,
+    h1 {
+        color: white;
+    }
 
-.errorLogo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-}
+    img {
+        width: 200px;
+        height: auto;
+    }
 
-.errorText{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-}
+    .errorLogo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+    }
 
-.errorText div{
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-}
+    .errorText {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
 
-#errorPage img {
-    width: 200px;
-    height: auto;
+        div {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+    }
 }
