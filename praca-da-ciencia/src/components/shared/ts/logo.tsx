@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material"
-import full from "../../assets/logo/full.png"
+import full from "../../../assets/logo/full.png"
 
 interface LogoProps
 {

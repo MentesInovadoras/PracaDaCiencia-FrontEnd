@@ -15,7 +15,7 @@ const BotaoAgendamento: React.FC<BotaoAgendamentoProps> = ({imgSrc, imgWdt, butt
 {
     return (
         <>
-            <Card sx={{ boxShadow: 3, borderRadius: 3, transition: '0.3s', '&:hover': { boxShadow: 6 } }}>
+            <Card sx={{ boxShadow: 3, borderRadius: 3, transition: '0.3s', '&:hover': { boxShadow: 6 }, backgroundColor: "secondary.main"}}>
                 <CardMedia
                     component="img"
                     width={imgWdt}

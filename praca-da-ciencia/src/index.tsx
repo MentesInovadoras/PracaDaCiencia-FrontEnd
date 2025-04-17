@@ -5,9 +5,9 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import AppRoutes from './router/approutes';
 import { ThemeProvider } from '@emotion/react';
-import { temaClaro, temaEscuro } from './components/shared/temas';
-import { CssBaseline } from '@mui/material';
-import SwapThemes from './components/shared/swap_themes';
+import { temaClaro, temaEscuro } from './components/shared/ts/temas';
+import { CssBaseline, useMediaQuery } from '@mui/material';
+import Cabecalho from './components/shared/ts/cabecalho';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -31,20 +31,20 @@ const Index: React.FC = () =>
     );
 
 
-  const toggleTheme = () =>
+  const toggleTheme = (): boolean =>
   {
     setIsDarkMode(prevState => !prevState);
+    return true;
   };
 
   return (
     <ThemeProvider theme={theme}>
       
       <CssBaseline />
-    
-      <SwapThemes onClick={toggleTheme}></SwapThemes>
 
       <BrowserRouter>
-        <AppRoutes></AppRoutes>
+        <Cabecalho swapCollorButton={toggleTheme} startTheme={storedMode === 'light' ? true : false}></Cabecalho>
+        <AppRoutes isMobile={useMediaQuery(theme.breakpoints.down("sm"))}></AppRoutes>
       </BrowserRouter>
 
     </ThemeProvider>
