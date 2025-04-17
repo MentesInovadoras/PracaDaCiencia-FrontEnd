@@ -1,7 +1,6 @@
 import React from "react";
 import './erro.css';
-import logo from '../../assets/mainLogo.png';
-
+import logo from "../../assets/logo/main.png";
 const Erro = () => {
     const goBack = () => {
         window.history.back();
