@@ -1,43 +1,43 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Visitante from '../view/visitantes/visitanetes.jsx';
-import Gestao from '../view/gestao/gestao.jsx';
-import Login from '../view/login/login.jsx';
-import Diario from '../view/diario/diario.jsx';
-import Semanal from '../view/semanal/semanal.jsx';
-import Mensal from '../view/mensal/mensal.jsx';
-import INDdiarios from '../view/detalhamentoINDdiarios/detalhamentoinddiarios.jsx';
-import GRPdiarios from '../view/detalhamentoGRPdiarios/detalhamentogrpdiarios.jsx';
-import INSTdiarios from '../view/detalhamentoINSTdiarios/detalhamentoinstdiarios.jsx';
-import INDMensal from '../view/detalhamentoINDmensal/detalhamentoindmensal.jsx';
-import GRPmensal from '../view/detalhamentoGRPmensal/detalhamentogrpmensal.jsx';
-import INSTmensal from '../view/detalhamentoINSTmensal/detalhamentoinstmensal.jsx';
-import Barra from '../view/barra/barra.jsx';
-import Erro from '../view/erro/erro.jsx';
-
-
+// Imports de Geral
+import HomePage       from '../geral/homePage/homePage.jsx';
+import Erro           from '../geral/erro/erro.jsx';
+import Login          from '../geral/login/login.jsx';
+// Imports de Visitantes
+import Calendario     from '../visitante/calendario/calendario.jsx';
+import SeletorVisita  from '../visitante/seletorVisita/seletorVisita.jsx';
+import Formulario     from '../visitante/formulario/formulario.jsx';
+import InfoRelevantes from '../visitante/infoRelevantes/infoRelevantes.jsx';
+// Imports de Gestão de Visitas
+import Diario         from '../gestaoVisitas/diario/diario.jsx';
+import Semanal        from '../gestaoVisitas/semanal/semanal.jsx';
+import Mensal         from '../gestaoVisitas/mensal/mensal.jsx';
+import Detalhamento   from '../gestaoVisitas/detalhamento/detalhamento.jsx';
 
 
 export default function AppRouter() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Barra/>} />
-        <Route path="login" element={< Login/>} />
-        <Route path="visitantes" element={<Visitante />} />
-        <Route path="gestao" element={< Gestao/>} />
-        <Route path="diario" element={< Diario/>} />
-        <Route path="semanal" element={< Semanal/>} />
-        <Route path="mensal" element={< Mensal/>} />
-        <Route path="individualdiario" element={< INDdiarios/>} />
-        <Route path="gruposdiario" element={< GRPdiarios/>} />
-        <Route path="instituicaodiario" element={< INSTdiarios/>} />
-        <Route path="individualmensal" element={< INDMensal/>} />
-        <Route path="institutomensal" element={< INSTmensal/>} />
-        <Route path="grupomensal" element={< GRPmensal/>} />
-        <Route path="*" element={< Erro/>} />
-       
-        
+
+        {/* GERAIS */}
+        <Route path="/" element={<HomePage />} />
+        <Route path="login" element={<Login />} />
+        <Route path="*" element={< Erro />} />
+
+        {/* GESTÃO VISITAS*/}
+        <Route path="diario" element={<Diario />} />
+        <Route path="semanal" element={<Semanal />} />
+        <Route path="mensal" element={<Mensal />} />
+        <Route path="detalhamento" element={<Detalhamento />} />
+
+        {/* VISITANTES */}
+        <Route path="calendario" element={<Calendario />} />
+        <Route path="seletorVisita" element={<SeletorVisita />} />
+        <Route path="formulario" element={<Formulario />} />
+        <Route path="informacoes" element={<InfoRelevantes />} />
+
       </Routes>
     </Router>
   );

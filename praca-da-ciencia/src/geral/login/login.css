@@ -1,0 +1,54 @@
+
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+    margin-top: 150px;
+}
+
+#botaoAcessar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#botaoAcessar button{ 
+    border-radius: 10px;
+    width: 100px;
+    padding: 5px;
+    border: none;
+    background-color: rgb(248, 174, 36);
+    
+
+}
+
+#pracaCiencia img{
+    width: 100px;
+    height: 100px;
+    border: none;
+}
+
+#prefeituradeVitoria img{
+    width: 150px;
+    height: 50px;
+    border: none;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+#inputLogin input{
+    border-radius: 10px;
+    width: 300px;
+    padding: 5px;
+    border: none;
+}
+
+#inputSenha input{
+    border-radius: 10px;
+    width: 300px;
+    padding: 5px;
+    border: none;
+}
+
+
