@@ -1,0 +1,106 @@
+#navbar {
+    background-color: var(--light-yellow);
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        box-shadow: 0 15px 16px -7px rgba(0, 0, 0, 0.1);
+
+        .mobileMenu {
+            display: none;
+            cursor: pointer;
+            gap: 5px;
+
+            div {
+                width: 32px;
+                height: 2px;
+                margin: 8px;
+                background-color: var(--black);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+
+
+        img {
+            width: 150px;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .navItens {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            list-style: none;
+        }
+
+        button {
+            border-radius: 10px;
+            padding: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            height: 40px;
+
+            &:hover {
+                background-color: var(--orange);
+
+            }
+        }
+
+    }
+
+    @media (max-width: 768px) {
+
+        .navbar {
+            justify-content: space-between;
+            padding: 0 50px;
+
+
+            .mobileMenu {
+                display: block;
+            }
+
+            .active {
+
+                .line1 {
+                    transform: rotate(45deg) translate(8px, 8px);
+                }
+                .line2 {
+                    opacity: 0;
+                }
+                .line3 {
+                    transform: rotate(-45deg) translate(6px, -7px);
+                }
+            }
+
+            #active {
+                transform: translateX(0);
+                display: flex;
+                box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2), inset 0 0 20px rgba(0, 0, 0, 0.1);
+                border: 1px solid rgba(0, 0, 0, 0.2);
+            }
+
+            .navItens {
+                display: hidden;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 50vw;
+                height: 100vh;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 100px;
+                transform: translateX(-100%);
+                transition: all 0.3s ease-in-out;
+                background-color: var(--white);
+                
+                li {
+                    margin-left: 0;
+                }
+            }
+
+        }
+    }
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import './erro.css';
-import logo from "../../assets/logo/main.png";
+/*import logo from '../../assets/logo/main.png';*/
+
 const Erro = () => {
     const goBack = () => {
         window.history.back();
@@ -9,7 +10,7 @@ const Erro = () => {
     return (
         <div id="errorPage">
             <div className="errorLogo">
-                <img src={logo} alt="Imagem da praça" />
+                <img  alt="Imagem da praça" />
                 <h1>ERRO 404</h1>
             </div>
             <div className="errorText">
