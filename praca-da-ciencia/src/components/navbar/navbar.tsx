@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from "../../assets/logo/main.png";
+/*import logo from "../../assets/logo/main.png";*/
 import NavItem, { NavItemProps } from '../navItens/navItem.tsx';
 import './navbar.css';
 
@@ -26,7 +26,7 @@ export default function Navbar() {
             <nav className="navbar">
                 <a href='/'>
                     <img
-                        src={logo}
+                        
                         alt="Praça da Ciência" />
                 </a>
                 <div className={`mobileMenu ${openMenu ? 'active' : ''}`} onClick={() => setOpenMenu(!openMenu)}>
