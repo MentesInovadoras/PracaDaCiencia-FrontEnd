@@ -1,0 +1,44 @@
+.menu_vertical{
+    width: 16%;
+    height: 200%;
+    background-color: rgb(216, 216, 215);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+
+#imagemlogo img {
+    width: 200px;
+}
+
+#botao_diario , #botao_semanal, #botao_mensal {
+    display: block;
+    margin: 15px;
+  
+}
+
+#botao_diario button{ 
+    border-radius: 10px;
+    width: 100px;
+    padding: 5px;
+    border: none;
+    background-color: rgb(248, 174, 36);
+}
+
+#botao_semanal button{ 
+    border-radius: 10px;
+    width: 100px;
+    padding: 5px;
+    border: none;
+    background-color: rgb(248, 174, 36);
+}
+
+#botao_mensal button{ 
+    border-radius: 10px;
+    width: 100px;
+    padding: 5px;
+    border: none;
+    background-color: rgb(248, 174, 36);
+}
