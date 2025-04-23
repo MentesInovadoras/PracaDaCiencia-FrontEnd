@@ -1,11 +1,15 @@
 import React from "react";
 import './login.css';
+import Navbar from "../../components/navbar/navbar.tsx";
+import Footer from "../../components/footer/footer.tsx";
 // import logo_praca from "../../router/image/pracaCIENCIA.png";
 // import logo_prefeitura from '../../router/image/logo_prefeitura_vitoria.png'
 
 export default function Login() {
     return (
         <>
+            <Navbar />
+
             <div>
                 <header>
                     <div id="pracaCiencia">
@@ -19,12 +23,15 @@ export default function Login() {
 
 
                 </header>
-                <div id="content">
+                <div id="loguin_content">
+
                     <div className="validation">
+
                         <h2>Login</h2>
                         <div id="inputLogin">
                             <input type="text" required placeholder="insira seu email" />
                         </div>
+
                         <h2>Senha</h2>
                         <div id="inputSenha">
                             <input type="password" required placeholder="Insira sua senha" />
@@ -39,6 +46,7 @@ export default function Login() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     )
 

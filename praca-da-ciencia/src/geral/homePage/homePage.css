@@ -3,7 +3,7 @@ body{
 }
 
 #homePage{
-    min-height: calc(100vh - 150px);
+    min-height: calc(100vh - var(--size-navbar));
     display: flex;
     flex-direction: column;
     align-items: center;

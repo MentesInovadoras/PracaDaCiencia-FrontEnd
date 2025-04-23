@@ -6,7 +6,8 @@
         text-decoration: none;
         font-size: 16px;
         padding: 4px, 0; 
-        transition: color 0.3s ease-in-out;  
+        transition: color 0.3s ease-in-out; 
+        color:  rgb(5, 5, 5);; 
 
         &:active,
         &:hover{

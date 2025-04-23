@@ -1,38 +1,36 @@
 import React from "react";
 import './semanal.css';
-import logoPraca from '../../assets/logo/mainWithText.png';
+import Navbar from "../../components/navbar/navbar.tsx";
+import Footer from "../../components/footer/footer.tsx";
+
 
 const Semanal = () => {
     return (
-            <header className="menu_vertical">
-                <div id="imagemlogo">
-                    <img src={logoPraca} alt="Logo" className="logo" />
+        <>
+        <Navbar />
+        <div id="semanal_content">
+            <div id="data_semnal">
+                <h1>Data</h1>  
+            </div>
 
-                </div>
-               
-                
-                <nav>
-                    <div id="botao_diario">
-                        <a href="diario"><button>diario</button></a>
+            <div id="hora_semanal">
+                <h1>Hora</h1>
+            </div>
 
-                    </div>
-                    
-                    <div id="botao_semanal">
-                     <a href="semanal"><button>semanal</button></a>
-
-                    </div>
-                    
-                    <div id="botao_mensal">
-                        <a href="mensal"><button>mensal</button></a>
-
-                    </div>
-                    
-                    
-                </nav>
-
-
-            </header>
+            <div id="Responsavel_semanal">
+                <h1>Responsável</h1>
+            </div>
         
+
+        </div>
+        <Footer />
+        
+
+
+
+        
+        </>
+            
     );
 
 }

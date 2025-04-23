@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../components/navbar/navbar.tsx";
 import './homePage.css';
+import Footer from "../../components/footer/footer.tsx";
 
 const homePage = () => {
     return (
@@ -14,7 +15,9 @@ const homePage = () => {
                 </div>
 
             </div>
+            <Footer />
         </>
+        
 
     );
 }
