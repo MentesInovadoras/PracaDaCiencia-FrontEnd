@@ -1,6 +1,7 @@
 import React from 'react';
-/*import logo from "../../assets/logo/main.png";*/
-import NavItem, { NavItemProps } from '../navItens/navItem.tsx';
+import logo from "../../assets/logo/main.png";
+import NavItem from '../navItens/navItem.tsx';
+import { NavItemProps } from '../navItens/navItem.tsx';
 import './navbar.css';
 
 export default function Navbar() {
@@ -17,6 +18,10 @@ export default function Navbar() {
             url: '/contato',
             label: 'Contato',
         },
+        {
+            url: '/',
+            label: 'sou técnico',
+        }
     ]
 
     const [openMenu, setOpenMenu] = React.useState<boolean>(false);
@@ -26,7 +31,7 @@ export default function Navbar() {
             <nav className="navbar">
                 <a href='/'>
                     <img
-                        
+                        src={logo}
                         alt="Praça da Ciência" />
                 </a>
                 <div className={`mobileMenu ${openMenu ? 'active' : ''}`} onClick={() => setOpenMenu(!openMenu)}>
@@ -44,11 +49,6 @@ export default function Navbar() {
                             label={item.label}
                         />
                     ))}
-                    <li className="navItem">
-                        <a href="/" className="navLink">
-                            Sou técnico
-                        </a>
-                    </li>
                 </ul>
 
 
