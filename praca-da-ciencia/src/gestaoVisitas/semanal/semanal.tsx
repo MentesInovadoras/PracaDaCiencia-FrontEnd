@@ -9,19 +9,17 @@ const Semanal = () => {
         <>
         <Navbar />
         <div id="semanal_content">
-            <div id="data_semnal">
-                <h1>Data</h1>  
+            <div id="data_semanal">
+                <h1>Data</h1> 
+                <h1>Hora</h1>  
+                <h1>Responsável</h1> 
+                <h1>Instituição</h1>  
+                <h1>Roteiro</h1> 
+                <h1>Status</h1>             
             </div>
 
-            <div id="hora_semanal">
-                <h1>Hora</h1>
-            </div>
 
-            <div id="Responsavel_semanal">
-                <h1>Responsável</h1>
-            </div>
-        
-
+           
         </div>
         <Footer />
         

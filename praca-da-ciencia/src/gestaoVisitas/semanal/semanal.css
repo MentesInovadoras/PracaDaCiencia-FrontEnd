@@ -1,4 +1,16 @@
 #semanal_content{
     min-height: calc(100vh - var(--size-navbar));
-
 }
+
+#data_semanal{
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: small;  
+    justify-content: space-around;
+    background-color: rgb(226, 154, 46);  
+}
+
+
+   
+
+
