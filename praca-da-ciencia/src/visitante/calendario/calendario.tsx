@@ -1,6 +1,6 @@
 import React from "react";
 import './calendario.css';
-// import logo_praca from "../../router/image/pracaCIENCIA.png";
+
 
 
 const Calendario = () => {

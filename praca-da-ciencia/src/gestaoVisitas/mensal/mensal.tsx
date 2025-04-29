@@ -1,23 +1,24 @@
 import React from "react";
 import './mensal.css';
+import Navbar from "../../components/navbar/navbar.tsx";
+import Footer from "../../components/footer/footer.tsx";
+
 
 const Mensal = () => {
 
     return (
-        <div>
-            <header>
-                <h1>imagem1</h1>
-                <nav>
-                    <a href="diario"><button>diario</button></a>
-                    <a href="semanal"><button>semanal</button></a>
-                    <a href="mensal"><button>mensal</button></a>
-                    <a href="visitantes"><button>voltar</button></a>
-
-                </nav>
+        <>
+        <Navbar />
+        <div id="mensal_container">
+            
 
 
-            </header>
+
+
         </div>
+        <Footer />
+        </>
+       
     );
 
 }

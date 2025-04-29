@@ -9,10 +9,12 @@ const homePage = () => {
             <Navbar />
             <div id="homePage">
 
-                <h1> Bem vindo a área <br /> do Administrador  </h1>
-                <div id="botao_entrar">
-                    <a href="login"><button type="submit">Entrar</button></a>
+                <h1> Bem vindo a área a <br /> Praça da Ciência  </h1>
+                <div id="botao_adiministrador">
+                    <a href="login"><button type="submit">Administrador</button></a>
                 </div>
+
+               
 
             </div>
             <Footer />

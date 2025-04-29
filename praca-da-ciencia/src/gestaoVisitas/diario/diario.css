@@ -1,0 +1,4 @@
+#diario_content{
+    min-height: calc(100vh - var(--size-navbar));
+}
+
