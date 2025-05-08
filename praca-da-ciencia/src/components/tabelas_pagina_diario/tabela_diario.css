@@ -1,0 +1,45 @@
+#tabela_diario{
+    border: 1px solid #000000;
+    padding: 20px;
+    border-radius: 8px;
+    width: 340px;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+
+    
+}
+
+#data_hora_visita_diario{
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+#roteiro_quantidade_visitas_diaria{
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
+
+}
+
+input{
+    border: 1px solid rgb(231, 154, 103);
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 10px;
+}
+
+#full-width{
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 12px;
+
+}
+
+
+label{
+    font-size: 18px;
+    color: #000000;
+}
+

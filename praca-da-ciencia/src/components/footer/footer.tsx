@@ -1,7 +1,7 @@
 import React from "react";
 import logoPrefeitura from "../../assets/logo/Logo-Prefeitura-de-Vitória.png";
 import logoCiencia from "../../assets/logo/mainWithText.png";
-import { FaInstagram } from "react-icons/fa6";
+
 
 import './footer.css';
 
