@@ -14,19 +14,23 @@ export default function TabelaDiario() {
                 
             </div>
 
-            <label >Responsavel :</label>
-            <input type="text" id="full-width" value= "exemplo" disabled />
+            <div id="responsavel_diario">
+                <label>Responsavel :</label>
+                <input type="text" id="full-width" value= "exemplo" disabled />
 
-            <label >Instituição de ensino :</label>
-            <input type="text" id="full-width" value= "exemplo" disabled />
+            </div>
 
-            <div className="roteiro_quantidade_visitas_diaria">
+            <div id="intituicao_diario">
+                <label id="instituicao_diario">Instituição de ensino :</label>
+                <input type="text" id="full-width" value= "exemplo" disabled />
+
+            </div>
+
+            <div id="roteiro_quantidade_visitas_diaria">
+
                 <input type="text" id="full-width" value= "Roteiro" disabled />
                 <input type="text" id="full-width" value= "00-00 visitantes" disabled />
-                
-                
-                
-
+        
             </div>
             
 
