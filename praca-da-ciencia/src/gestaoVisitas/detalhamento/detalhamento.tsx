@@ -10,6 +10,7 @@ const detalhamento = () => {
         <Navbar />
         <div id="detalhamento_content">
             <DetalhamentoAgendamento />
+            
 
 
         </div>
