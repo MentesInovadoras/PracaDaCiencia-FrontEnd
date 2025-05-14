@@ -9,7 +9,9 @@ const Diario = () => {
         <>
         <Navbar />
         <div id="diario_content">
-            <TabelaDiario /> 
+            <TabelaDiario />
+            
+
         
         
 

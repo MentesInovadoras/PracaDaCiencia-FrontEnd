@@ -85,50 +85,51 @@ export default function DetalhamentoAgendamento (){
         <div id="detalhamento_agendamento">
             <div id=" data_hora_detalhamento_visitas">
 
-                <label id="data_visitante_detalhamento">Data:</label>
-                <input type="date" name="" id="" disabled = {!editMode}/>
+                <label id="label_data_visitante_detalhamento">Data:</label>
+                <input type="date" id="input_data_visitante_detalhamento" disabled = {!editMode}/>
             
-                <label id="hora_visitante_detalhamento" >Hora:</label>
-                <input type="time" name="" id="" disabled = {!editMode}/>
+                <label id="label_hora_visitante_detalhamento" >Hora:</label>
+                <input type="time" id="input_data_visitante_detalhamento"  disabled = {!editMode}/>
 
             </div>
 
             <div id="nome_responsavel_detalhamento">
-                <label>Nome Completo do Visitante Responsável:</label>
-                <input type="text" name="" id="" disabled = {!editMode}  />
+                <label id="label_nome_responsavel_detalhamento">Nome Completo do Visitante Responsável:</label>
+                <input type="text" disabled = {!editMode}  id="input_nome_responsavel_detalhamento"/>
             </div>
             
             <div id="cpf_visitante_detalhamento">
-                <label>CPF do Visitante Responsável:</label>
-                <CPFInput value = {cpf} onChange={setcpf}  disabled = {!editMode}/>
-                <p></p>
+                <label id="label_cpf_visitante_responsavel_detalhamento">CPF do Visitante Responsável:</label>
+                <CPFInput  value = {cpf} onChange={setcpf}  disabled = {!editMode} />
+               
 
             </div>
 
             <div id="email_visitante_detalhamento">
-                <label >E-mail:</label>
-                <input type="email" name="" id=""  disabled = {!editMode}/>
+                <label id="label_email_visitante_responsavel_detalhamento" >E-mail:</label>
+                <input id="input_email_visitante_responsavel_detalhamento" type="email"   disabled = {!editMode}/>
             </div>
 
             <div id="telefone_visitante_detalhamento" >
-                <label >Telefone:</label>
+                <label id="label_telefone_visitante_responsavel_detalhamento" >Telefone:</label>
                 <TelefoneInput value = {telefone} onChange={settelefone}  disabled = {!editMode}/>
 
             </div>  
 
                 
             <div id="dados_instituicao_detalhamento">
-                <label >Município:</label>
-                <input type="text" disabled = {!editMode}/>
+                <label id="label_dados_instituicao_detalhamento" >Município:</label>
+                <input id="input_dados_instituicao_detalhamento" type="text" disabled = {!editMode}/>
             </div>
 
             <div id="observacoes">
-                <label>Observações:</label>
-                <input type="text" disabled = {!editMode}/>
+                <label id="label_observacao_instituicao_detalhamento">Observações:</label>
+                <textarea name="" id="input_dados_observacao_instituicao_detalhamento" disabled = {!editMode}></textarea>
+               
             </div>
 
             <div id="botao_editar_detalhamento">
-                <label htmlFor="editarCheck">modo editor</label>
+                <label htmlFor="editarCheck" id="label_botao_editar_detalhamento">modo editor: </label>
                 
                 <input
                 type="checkbox"

@@ -11,6 +11,7 @@ const detalhamento = () => {
         <div id="detalhamento_content">
             <DetalhamentoAgendamento />
             
+            
 
 
         </div>

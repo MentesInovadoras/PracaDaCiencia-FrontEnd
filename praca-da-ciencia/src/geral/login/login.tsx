@@ -29,7 +29,8 @@ export default function Login() {
 
                         <h2>Login</h2>
                         <div id="inputLogin">
-                            <input type="text" required placeholder="insira seu email" />
+                            <input type="email" required placeholder=" digite seu email"  />
+                           
                         </div>
 
                         <h2>Senha</h2>
