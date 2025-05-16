@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Grid, Typography, } from "@mui/material";
-import Logo from "./../../../../components/shared/ts/logo";
+import Logo from "../../../../components/shared/ts/imgHelppers/logo";
 
 
 const PageNotFound = () => 

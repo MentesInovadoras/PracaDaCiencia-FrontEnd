@@ -7,7 +7,7 @@ import AppRoutes from './router/approutes';
 import { ThemeProvider } from '@emotion/react';
 import { temaClaro, temaEscuro } from './components/shared/ts/temas';
 import { CssBaseline, useMediaQuery } from '@mui/material';
-import Cabecalho from './components/shared/ts/cabecalho';
+import Cabecalho from './components/shared/ts/cabecalho/cabecalho';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

@@ -1,5 +1,5 @@
-import LayoutMobile from './layout_mobile';
-import LayoutDesktop from './layout_desktop';
+import LayoutMobile from './layouts/layout_mobile';
+import LayoutDesktop from './layouts/layout_desktop';
 
 
 interface LandpageProps
