@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from "../../assets/logo/main.png";
-import NavItem from '../navItens/navItem.tsx';
-import { NavItemProps } from '../navItens/navItem.tsx';
+import NavItem, { NavItemProps } from './../navItens/navItem';
 import './navbar.css';
 
 export default function Navbar() {

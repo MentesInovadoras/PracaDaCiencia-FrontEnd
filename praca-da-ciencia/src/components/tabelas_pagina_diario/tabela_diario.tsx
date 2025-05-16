@@ -10,13 +10,13 @@ export default function TabelaDiario() {
     const[quantidadeVisitantes, setQuantidadeVisitantes] = useState("");
 
 
-    const handleCheckboxChange = (e) => {
+    const handleCheckboxChange = (e: any) => {
         setEditMode(e.target.checked);
 
       
     }
 
-    const handleQuantidadeChange = (e) => {
+    const handleQuantidadeChange = (e: any) => {
         let value = e.target.value;
 
         value = value.replace(/[^0-9]/g, '');
