@@ -1,0 +1,73 @@
+#detalhamento_agendamento{
+    width: fit-content;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 10px;
+    padding:  12px ;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgba(255, 255, 255, 0.87);
+
+}
+
+#input_data_visitante_detalhamento,
+#input_data_visitante_detalhamento{
+    border:1px solid #9c9c9c65 ;  
+    border-radius: 10px;
+    margin-left: 5px;
+    ;
+}
+
+#label_nome_responsavel_detalhamento,
+#label_data_visitante_detalhamento,
+#label_hora_visitante_detalhamento,
+#label_nome_responsavel_detalhamento,
+#label_cpf_visitante_responsavel_detalhamento,
+#label_email_visitante_responsavel_detalhamento,
+#label_telefone_visitante_responsavel_detalhamento,
+#label_dados_instituicao_detalhamento,
+#label_observacao_instituicao_detalhamento,
+#label_botao_editar_detalhamento {
+    font-size: 20px;
+    margin-top: 4px;
+}
+
+#input_nome_responsavel_detalhamento,
+#input_email_visitante_responsavel_detalhamento{
+    width: 50%;
+    padding: 5px 10px;
+    border: 1px solid #9c9c9c65;
+    border-radius: 15px;
+
+}
+
+#CPF,
+#telefone{
+    width: 20%;
+    padding: 5px 10px;
+    border: 1px solid #9c9c9c65;
+    border-radius: 15px;
+ 
+}
+
+#input_dados_instituicao_detalhamento{
+    width: 40%;
+    padding: 5px 10px;
+    border: 1px solid #9c9c9c65;
+    border-radius: 15px;
+
+}
+
+#input_dados_observacao_instituicao_detalhamento{
+    width: 100%;
+    height: 70px;
+    padding: 5px 5px;
+    border: 1px solid #9c9c9c65;
+    border-radius: 15px; 
+}
+
+
+
+

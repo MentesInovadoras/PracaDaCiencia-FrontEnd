@@ -1,0 +1,61 @@
+#tabela_diario{
+    
+    width: fit-content;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 10px;
+    padding:  12px ;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgba(255, 255, 255, 0.87);
+
+    
+
+}
+
+#data_detalhamento_diario,
+#hora_detalhamento_diario{
+    border:1px solid #9c9c9c65 ;  
+    border-radius: 10px;
+    margin-left: 5px;
+    
+}
+
+#label_responsavel_detalhamento_diario,
+#label_instituicao_detalhamento_diario,
+#label_quantidade_detalhamento_diario,
+#label_editar_detalhamento_diario{
+    font-size: 20px;
+    margin-top: 4px;
+}
+
+#input_responsavel_detalhamento_diario,
+#input_instituicao_detalhamento_diario{
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #9c9c9c65;
+    border-radius: 15px;
+   
+}
+
+#input_roteiro_detalhamento_diario{
+    width: 400px;
+    height: 50px;
+    padding: 5px 5px;
+    border: 1px solid #9c9c9c65;
+    border-radius: 15px; 
+   
+}
+
+#input_quantidade_detalhamento_diario{
+    width: 20%;
+    padding: 5px 10px;
+    border: 1px solid #9c9c9c65;
+    border-radius: 15px;
+}
+
+
+
+

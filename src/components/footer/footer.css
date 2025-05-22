@@ -1,0 +1,24 @@
+#footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(119, 119, 113);
+    box-shadow: 0 15px 16px -7px rgba(0, 0, 0, 0.1);
+    max-width: 100vw;
+    
+
+    #imgPrefeitura img {
+        width: 150px;
+    }
+
+    #imgLogoPracaCiencia img {
+        width: 150px;
+    }
+
+    #texto_footer {
+        text-align: center;
+
+
+
+    }
+}

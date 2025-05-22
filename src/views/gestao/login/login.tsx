@@ -1,0 +1,54 @@
+import React from "react";
+import './login.css';
+import Navbar from "../../../components/navbar/navbar";
+import Footer from "../../../components/footer/footer";
+// import logo_praca from "../../router/image/pracaCIENCIA.png";
+// import logo_prefeitura from '../../router/image/logo_prefeitura_vitoria.png'
+
+export default function Login() {
+    return (
+        <>
+            <Navbar />
+
+            <div>
+                <header>
+                    <div id="pracaCiencia">
+                        {/* <img src={logo_praca} alt="logo" />   */}
+                    </div>
+
+                    <div id="prefeituradeVitoria">
+                        {/* <img src={logo_prefeitura} alt="" /> */}
+
+                    </div>
+
+
+                </header>
+                <div id="loguin_content">
+
+                    <div className="validation">
+
+                        <h2>Login</h2>
+                        <div id="inputLogin">
+                            <input type="email" required placeholder=" digite seu email"  />
+                           
+                        </div>
+
+                        <h2>Senha</h2>
+                        <div id="inputSenha">
+                            <input type="password" required placeholder="Insira sua senha" />
+                        </div>
+
+                        <br />
+                        <br />
+                        <div id="botaoAcessar">
+                            <button type="submit">acessar</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <Footer />
+        </>
+    )
+
+}
