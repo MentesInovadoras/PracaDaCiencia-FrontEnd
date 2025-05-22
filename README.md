@@ -343,7 +343,7 @@ Distributed under the GNU GENERAL PUBLIC LICENSE. See <a href="LICENSE.txt">`LIC
 
 ### Gustavo de Paula Bonjardim
 <details>
-  <summary>Contato</summary>
+  <summary>Contact</summary>
     <ul>
       <li>
         Email: gustavobonjardim06@gmail.com
