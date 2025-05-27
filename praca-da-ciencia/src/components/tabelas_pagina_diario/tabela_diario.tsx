@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './tabela_diario.css';
+import { Card, TextField } from "@mui/material";
 
 
 
@@ -37,14 +38,13 @@ export default function TabelaDiario() {
             </div>
 
             <div id="responsavel_diario">
-                <label id="label_responsavel_detalhamento_diario">Responsavel :</label>
-                <input type="text"  required placeholder="exemplo" disabled = {!editMode} id="input_responsavel_detalhamento_diario"/>
-
+                
+                    <TextField variant="standard" label="Responsável: " disabled = {!editMode}/>
+                
             </div>
 
             <div id="intituicao_diario">
-                <label id="label_instituicao_detalhamento_diario">Instituição de ensino :</label>
-                <input type="text" required placeholder="exemplo" disabled = {!editMode} id="input_instituicao_detalhamento_diario" />
+                <TextField label="Instituição" variant="standard" disabled = {!editMode}/>
 
             </div>
 
