@@ -1,4 +1,5 @@
 import { Box, Button, Card, CardActions, CardContent, CardMedia, Grid, Typography } from "@mui/material";
+import { useNavigate } from 'react-router-dom';
 
 
 export interface CardAgendamentoProps
@@ -12,6 +13,8 @@ export interface CardAgendamentoProps
 
 const CardAgendamento: React.FC<CardAgendamentoProps> = ({imgSrc, imgWdt, buttonText, routerPush}) =>
 {
+    const navigate = useNavigate();
+
     return (
         <>
             <Card sx={{ boxShadow: 3, borderRadius: 3, transition: '0.3s', '&:hover': { boxShadow: 6 }, backgroundColor: "secondary.main"}}>
@@ -27,16 +30,15 @@ const CardAgendamento: React.FC<CardAgendamentoProps> = ({imgSrc, imgWdt, button
                         <Button
                             size="large"
                             color="secondary"
-                            onClick={() => alert("Botão clicado!")}
+                            onClick={() => navigate('/calendarioVisitante')}
                             fullWidth
-
                             sx={{
-                              backgroundColor: 'secondary.main', // Cor de fundo do botão
-                              color: 'black',                  // Cor do texto
-                              textTransform: 'none',           // Evitar que o texto fique em maiúsculas
-                              '&:hover': { backgroundColor: 'secondary.dark' }  // Cor de fundo ao passar o mouse
+                                backgroundColor: 'secondary.main', 
+                                color: 'black',                  
+                                textTransform: 'none',           
+                                '&:hover': { backgroundColor: 'secondary.dark' }  
                             }}
-                            >
+                        >
                             { buttonText }
                         </Button>
                 </CardActions>
