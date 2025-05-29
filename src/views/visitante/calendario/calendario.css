@@ -1,0 +1,225 @@
+@charset "UTF-8";
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    color: rgba(63, 55, 55, 0.8);
+}
+
+body, html{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* fundo da pagina */
+.calendario{
+    display: flex;
+    background: linear-gradient(to right, rgba(255, 153, 51, 0.2), rgba(255, 255, 255, 1));
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, rgba(255, 153, 51, 0.2), #fff);
+    min-height: 100vh;
+    padding: 20px;
+    padding-top: 100px; 
+}
+
+/* texto "selecionar data e hora"*/
+#h1_data{
+    border: 2px solid rgba(255, 163, 86, 1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+}
+
+/* caixa do calendario */
+#card_calendario{
+    border: 2px solid rgba(255, 163, 86, 1);
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    margin: 3rem auto 0 auto;
+}
+
+/* caixa dos horarios */
+#card_horarios{
+    border: 2px solid rgba(255, 163, 86, 1);
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    max-width: 300px;
+    margin: 0 auto 0 auto;
+}
+
+/*titulo mes e ano */
+.mes_ano{
+    font-size: 28px;
+    margin: 0;
+}
+
+/* cabeçalho do calendario */
+.header_mes_ano{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.header_botoes{
+    display: flex;
+    justify-content: space-between;
+    margin-top:-50px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+}
+
+/* DIAS DA SEMANA (dom, seg, ter..) */
+.weekday{
+    font-weight: bold;
+    text-align: center;
+    font-size: 22px;
+}
+/* DIAS DO MES (1,2,3..)*/
+#td_days{
+    height: 50px;
+    text-align: center;
+    font-size: 32px;
+    padding: 10px;
+    border-radius:15px;
+    cursor: pointer;
+    transition: border 0.1s;
+    background-color: 0.2s;
+
+}
+/* horarios disponiveis */
+#td_times{
+    font-size: 32px;
+    border: 2px solid rgba(255, 117, 1, 0.5);
+    border-radius:20px;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* destaca o ponto onde o cursor está passando - DIAS DO MES e HORARIO DISPONIVEL*/
+#td_days:hover, #td_times:hover{
+    border: 1px solid rgba(255, 117, 1, 1); /* Borda mais grossa e visível */
+    background-color: rgba(255, 117, 1, 0.4); /* Opcional: mudar o fundo para destacar */
+}
+
+/* dia selecionado no calendario */
+.selected_day{
+    border: 3px solid rgba(255, 117, 1, 1); /* Borda mais grossa e visível */
+    background-color: rgba(255, 117, 1, 0.1); /* Opcional: mudar o fundo para destacar */
+}
+
+/* dia indisponivel */
+.dia_indisponivel {
+    color: #ccc;
+    pointer-events: none;
+}
+
+/* botao de proximo mes*/
+#botao_voltar:hover, #botao_proximo:hover{
+    background-color: rgba(255, 163, 86, 0.6);
+}
+
+#botao_voltar, #botao_proximo{
+    background-color: rgba(255, 255, 255, 1);
+    border-color: black rgba(255, 163, 86, 1);
+    border-radius: 50px;
+    padding: 5px 15px;
+    font-size: 32px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* os 4 horarios disponiveis */
+#horarios_disponiveis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#horarios_disponiveis table {
+    border-spacing: 20px;
+}
+
+/* circulo dos horarios */
+#horarios_disponiveis td {
+    justify-content: center;
+    align-items: center;
+}
+
+/* circulo onde ficam os horarios disponiveis */
+.horarios_disponiveis {
+    width: 80px;
+    height: 35px;
+    border-radius: 35px;
+    border: 2px solid rgba(255, 117, 1, 0.5);
+    font-size: 16px;
+    transition: border 0.1s, background-color 0.2s;
+    cursor: pointer;
+    text-align: center;
+    bottom: 90px;
+}
+
+/* horario selecionados */
+.horarios_disponiveis.selected {
+    border: 3px solid rgba(255, 117, 1, 1); /* Borda mais grossa e visível */
+    background-color: rgba(255, 117, 1, 0.1); /* Opcional: mudar o fundo para destacar */
+}
+
+#semana table, #horarios_disponiveis table{
+    border-spacing: 12px 3px; /* mantemos esse espaçamento entre células */
+    width: 100%;
+    border-collapse: separate;
+}
+
+.next_month_day {
+    color: #999;
+}
+
+#botao_continuar_calendario{
+    font-weight: bold;
+    color: white;
+    background-color: rgba(255, 117, 1, 1) !important;
+    border: none;
+    border-radius: 10px !important;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    margin: 3rem auto 5rem auto;
+    display: block;
+    cursor: pointer;
+    align-content: center;
+    font-size: 1rem;
+    width: 150px !important;
+}
+
+#botao_continuar_calendario:hover {
+    background-color: rgb(214, 80, 3) !important;
+}

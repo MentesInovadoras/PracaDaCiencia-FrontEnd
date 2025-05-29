@@ -66,7 +66,7 @@ const Galeria: React.FC = () => {
     return (
         <>
             <Typography variant="h4" align="center" color="primary" gutterBottom>
-                Galeria
+                Galeria de Fotos
             </Typography>
 
             <ImageList sx={{ width: "100%", objectFit: "cover" }} cols={3}>
