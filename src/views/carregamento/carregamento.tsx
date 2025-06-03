@@ -10,16 +10,17 @@ export default function Carregamento() {
     useEffect(() => {
         const timer = setTimeout(() => {
             navigate("/home"); // Redireciona para a Home após 1 segundo
-        }, 2000);
+        }, 1000);
 
         return () => clearTimeout(timer); // Limpa o timer ao desmontar o componente
     }, [navigate]);
 
     return (
-        <div className="container">
-            <div className="logoLoading">
-                <img src={Logo} alt="Ícone" className="animatedLogo"/>
-            </div>
+    <div className="container">
+        <div className="logoLoading">
+        <img src={Logo} alt="Ícone" className="animatedLogo" />
         </div>
+    </div>
     );
+
 }

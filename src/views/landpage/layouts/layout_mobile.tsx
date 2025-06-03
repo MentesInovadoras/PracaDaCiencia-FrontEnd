@@ -30,7 +30,7 @@ const LayoutMobile: React.FC = () =>
                 <Grid>
                     <Logo sizeInPixels={100} />
                 <Typography variant="h3" align="center">
-                    Explore a Praça da Ciência
+                    Conheça a Praça da Ciência
                 </Typography>
                 <Typography variant="h6" align="center" sx={{ marginTop: '20px' }}>
                     Um lugar onde você pode aprender e explorar a ciência de maneira divertida e educativa.

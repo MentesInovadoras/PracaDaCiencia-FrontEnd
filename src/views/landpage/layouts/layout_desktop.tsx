@@ -13,26 +13,27 @@ import DuvidasFrequentes from '../shared/duvidas_frequentes';
 
 const LayoutDesktop: React.FC = () => 
 {
+
     const AgendamentoIndividualProps: CardAgendamentoProps = {imgSrc: imgIndividual,  imgWdt: 200, buttonText: "Sozinho", routerPush: "/calendarioVisitante"}
     const AgendamentoGuiadoProps: CardAgendamentoProps = {imgSrc: imgGuiado,  imgWdt: 200, buttonText: "Em Grupo com um Guia", routerPush: "/calendarioVisitante"}
     const AgendamentoInstitucionalProps: CardAgendamentoProps = {imgSrc: imgInstitucional,  imgWdt: 200, buttonText: "Vou Levar Minha Instituição", routerPush: "/calendarioVisitante"}
+
+    const AgendamentoIndividualProps: CardAgendamentoProps = {imgSrc: imgIndividual,  imgWdt: 200, buttonText: "Vou Sozinho", routerPush: ""}
+    const AgendamentoGuiadoProps: CardAgendamentoProps = {imgSrc: imgGuiado,  imgWdt: 200, buttonText: "Em Grupo de até 10 Pessoas", routerPush: ""}
+    const AgendamentoInstitucionalProps: CardAgendamentoProps = {imgSrc: imgInstitucional,  imgWdt: 200, buttonText: "Vou Levar Minha Instituição", routerPush: ""}
 
     return (
         <>
             <Box sx={{ backgroundColor: 'background.default', minHeight: '100vh' }}>
             {/* Banner Section */}
             <Box sx={{ 
-            backgroundImage: 'url("/images/praca-da-ciencia.jpg")', 
-            backgroundSize: 'cover', 
-            backgroundPosition: 'center', 
-            padding: '60px 0', 
-            }}>
+            backgroundImage: 'url("/images/praca-da-ciencia.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', padding: '60px 0', }}>
             <Container>
             <Grid container justifyContent="center" spacing={2}>
                 <Grid>
                     <Logo sizeInPixels={100} />
                 <Typography variant="h3" align="center">
-                    Explore a Praça da Ciência
+                    Conheça a Praça da Ciência
                 </Typography>
                 <Typography variant="h6" align="center" sx={{ marginTop: '20px' }}>
                     Um lugar onde você pode aprender e explorar a ciência de maneira divertida e educativa.
