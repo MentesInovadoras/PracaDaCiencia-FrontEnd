@@ -1,5 +1,6 @@
 import './calendario.css';
 import { useNavigate, useLocation } from 'react-router-dom';
+// import Formulario from './formulario';
 
 export default function Calendario() {
   const navigate = useNavigate();
@@ -8,8 +9,10 @@ export default function Calendario() {
   const tipo = location.state?.tipo || 'individual';
 
   function handleClick() {
-    navigate(`/agendamento/${tipo}`);
+    console.log("Redirecionando para /formulario com tipo:", tipo);
+    navigate('/formulario', { state: { tipo } });
   }
+
   return (
   <>  
   <div className="weekcalendar">

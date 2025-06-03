@@ -7,7 +7,7 @@ const VisitanteRoutes: React.FC = () =>
     return (
         <Routes>
             <Route path="/calendario" element={ <Calendario /> }></Route>
-            <Route path="/agendamento" element={ <Formulario /> }></Route>
+            <Route path="/formulario" element={ <Formulario /> }></Route>
         </Routes>
     )
 }

@@ -14,6 +14,7 @@ const GestaoVisitaRoutes: React.FC = () =>
             <Route path="/diario" element={ <Diario /> }></Route>
             <Route path="/mensal" element={ <Mensal /> }></Route>
             <Route path="/semanal" element={ <Semanal /> }></Route>
+            <Route path="/formulario" element={ <Formulario /> }></Route>
         </Routes>
     )
 }

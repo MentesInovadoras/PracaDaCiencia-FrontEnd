@@ -1,13 +1,14 @@
-import React from "react";
-import './formulario.css';
+import { useLocation } from 'react-router-dom';
 
+export default function Formulario() {
+  const location = useLocation();
+  const tipo = location.state?.tipo || 'individual';
+  console.log("Tipo recebido:", tipo);
 
-const Formulario = () => {
-    return (
-        <div className="formulario-container">
-            <h1>Esta é uma pagina para preenchimendo do formulário pelo visitante</h1>
-            
-        </div>
-    );
+  return (
+    <div>
+      <h1>Formulário - Tipo: {tipo}</h1>
+      {/* Formulário real vem aqui */}
+    </div>
+  );
 }
-export default Formulario;

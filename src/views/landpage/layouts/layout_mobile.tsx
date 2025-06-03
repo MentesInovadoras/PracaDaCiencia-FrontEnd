@@ -11,9 +11,9 @@ import CustomFooter from '../../../components/shared/ts/custom_footer';
 
 const LayoutMobile: React.FC = () => 
 {
-    const AgendamentoIndividualProps: CardAgendamentoProps = {imgSrc: imgIndividual,  imgWdt: 200, buttonText: "Sozinho", routerPush: ""}
-    const AgendamentoGuiadoProps: CardAgendamentoProps = {imgSrc: imgGuiado,  imgWdt: 200, buttonText: "Em Grupo com um Guia", routerPush: ""}
-    const AgendamentoInstitucionalProps: CardAgendamentoProps = {imgSrc: imgInstitucional,  imgWdt: 200, buttonText: "Vou Levar Minha Instituição", routerPush: ""}
+    const AgendamentoIndividualProps: CardAgendamentoProps = {imgSrc: imgIndividual,  imgWdt: 200, buttonText: "Sozinho", routerPush: "/calendarioVisitante"}
+    const AgendamentoGuiadoProps: CardAgendamentoProps = {imgSrc: imgGuiado,  imgWdt: 200, buttonText: "Em Grupo com um Guia", routerPush: "/calendarioVisitante"}
+    const AgendamentoInstitucionalProps: CardAgendamentoProps = {imgSrc: imgInstitucional,  imgWdt: 200, buttonText: "Vou Levar Minha Instituição", routerPush: "/calendarioVisitante"}
 
     return (
         <>
