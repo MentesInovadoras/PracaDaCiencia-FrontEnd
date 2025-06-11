@@ -4,6 +4,7 @@ import DetalhamentoAgendamento from "../../components/detalhamento_agendamento_v
 import Diario from "../../views/gestao/gestaoVisitas/diario/diario";
 import Mensal from "../../views/gestao/gestaoVisitas/mensal/mensal";
 import Semanal from "../../views/gestao/gestaoVisitas/semanal/semanal";
+import Formulario from "../../views/visitante/formulario/formulario";
 
 const GestaoVisitaRoutes: React.FC = () =>
 {
