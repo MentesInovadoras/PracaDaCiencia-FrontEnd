@@ -12,9 +12,17 @@ export interface CardAgendamentoProps
 
 
 const CardAgendamento: React.FC<CardAgendamentoProps> = ({imgSrc, imgWdt, buttonText, routerPush}) =>
-{
     const navigate = useNavigate();
 
+    function handleClick() {
+        let tipo = "individual";
+        if (buttonText.includes("Guia")) tipo = "grupo";
+        else if (buttonText.includes("Instituição")) tipo = "instituicao";
+
+        navigate(routerPush, { state: { tipo } });
+    }
+
+    const navigate = useNavigate();
     return (
         <>
             <Card sx={{ boxShadow: 3, borderRadius: 3, transition: '0.3s', '&:hover': { boxShadow: 6 }, backgroundColor: "secondary.main"}}>

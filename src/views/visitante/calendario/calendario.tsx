@@ -1,5 +1,6 @@
 import './calendario.css';
 import { useNavigate, useLocation } from 'react-router-dom';
+// import Formulario from './formulario';
 import DiasMesAno from '../../../components/dias_mes_ano/DiasMesAno';
 import HorariosDisponiveis from '../../../components/dias_mes_ano/HorariosDisponiveis';
 
@@ -10,8 +11,10 @@ export default function Calendario() {
   const tipo = location.state?.tipo || 'individual';
 
   function handleClick() {
-    navigate(`/agendamento/${tipo}`);
+    console.log("Redirecionando para /formulario com tipo:", tipo);
+    navigate('/formulario', { state: { tipo } });
   }
+
   return (
   <>  
   <div className="calendario">

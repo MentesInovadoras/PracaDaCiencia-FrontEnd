@@ -13,9 +13,13 @@ import DuvidasFrequentes from '../shared/duvidas_frequentes';
 
 const LayoutDesktop: React.FC = () => 
 {
-    const AgendamentoIndividualProps: CardAgendamentoProps = {imgSrc: imgIndividual,  imgWdt: 200, buttonText: "Vou Sozinho", routerPush: "/calendarioVisitante"}
-    const AgendamentoGuiadoProps: CardAgendamentoProps = {imgSrc: imgGuiado,  imgWdt: 200, buttonText: "Em Grupo de até 10 Pessoas", routerPush: "/calendarioVisitante"}
+    const AgendamentoIndividualProps: CardAgendamentoProps = {imgSrc: imgIndividual,  imgWdt: 200, buttonText: "Sozinho", routerPush: "/calendarioVisitante"}
+    const AgendamentoGuiadoProps: CardAgendamentoProps = {imgSrc: imgGuiado,  imgWdt: 200, buttonText: "Em Grupo com um Guia", routerPush: "/calendarioVisitante"}
     const AgendamentoInstitucionalProps: CardAgendamentoProps = {imgSrc: imgInstitucional,  imgWdt: 200, buttonText: "Vou Levar Minha Instituição", routerPush: "/calendarioVisitante"}
+
+    const AgendamentoIndividualProps: CardAgendamentoProps = {imgSrc: imgIndividual,  imgWdt: 200, buttonText: "Vou Sozinho", routerPush: ""}
+    const AgendamentoGuiadoProps: CardAgendamentoProps = {imgSrc: imgGuiado,  imgWdt: 200, buttonText: "Em Grupo de até 10 Pessoas", routerPush: ""}
+    const AgendamentoInstitucionalProps: CardAgendamentoProps = {imgSrc: imgInstitucional,  imgWdt: 200, buttonText: "Vou Levar Minha Instituição", routerPush: ""}
 
     return (
         <>
