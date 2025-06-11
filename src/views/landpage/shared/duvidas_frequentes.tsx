@@ -10,7 +10,6 @@ const DuvidasFrequentes: React.FC = () =>
         {titulo: "Posso levar lanche?", conteudo: "Sim, você pode levar lanche para consumo próprio."},
 
         {titulo: "A praça possui bicicletário?", conteudo: "Sim, contamos com bicicletário. Pedimos que tragam cadeado para manter sua bicicleta mais segura, pois não há vigia."},
-        {titulo: "Tem bicicletário?", conteudo: "Sim, contamos com bicicletário. Pedimos que tragam cadeado para manter sua bicicleta mais segura, pois não há vigia."},
         {titulo: "É permitido entrar com trajes de banho?", conteudo: "Não! É proibido adentrar o espaço sem camisa e/ou com roupa de banho."},
         {titulo: "Posso levar meu animal de estimação?", conteudo: "Não! Não é permitida a entrada de animais."},
         {titulo: "O que mais é probido?", conteudo: "É proibido jogar bola, consumir bebida alcoólica, fumar, realizar festas de aniversário, andar de patins, patinete, skate e similares."}

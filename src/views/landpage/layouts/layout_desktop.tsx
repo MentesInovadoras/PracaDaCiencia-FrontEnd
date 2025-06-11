@@ -36,7 +36,8 @@ const LayoutDesktop: React.FC = () =>
                 
                 <hr />
                 <Typography color="primary" variant="h4" align="center" sx={{ marginTop: '20px' }}>
-                    Como você vai visitar a gente?
+                    Como você vai visitar a gente?           
+
                 </Typography>
                 <Grid container direction={"row"} spacing={2} justifyContent="center">
                     <Grid size={4}>
