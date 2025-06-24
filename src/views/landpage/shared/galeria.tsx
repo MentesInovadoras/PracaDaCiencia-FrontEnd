@@ -84,28 +84,28 @@ const Galeria: React.FC = () => {
                 onClose={handleClose} 
                 maxWidth={false}
                 PaperProps={{ 
-                    sx: { backgroundColor: 'rgba(0, 0, 0, 0.9)', boxShadow: 'none', overflow: 'hidden'} 
+                    sx: { backgroundColor: 'rgba(240, 248, 255, 1)', boxShadow: 'none', overflow: 'hidden'} 
                 }}
             >
                 <Box sx={{ position: 'relative', p: 2, borderRadius: 2, display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100px'}}>
                     
                     <IconButton
                         onClick={handleClose} //botao fechar
-                        sx={{ backgroundColor: 'rgba(240, 248, 255, 0.6)', position: 'absolute', top: 8, right: 8, color: '#fff', zIndex: 2, width: 48, height: 48}}
+                        sx={{ backgroundColor: 'rgba(240, 248, 255, 0.6)', position: 'absolute', top: 20, right: 20, color: '#fff', zIndex: 2, width: 48, height: 48}}
                     >
                         <CloseIcon />
                     </IconButton>
 
                     <IconButton
                         onClick={handlePrev} //botao anterior
-                        sx={{ backgroundColor: 'rgba(240, 248, 255, 0.6)', position: 'absolute', top: '50%', left: 8, transform: 'translateY(-50%)', color: '#fff', zIndex: 2, width: 60, height: 60}}
+                        sx={{ backgroundColor: 'rgba(240, 248, 255, 0.6)', position: 'absolute', top: '50%', left: 20, transform: 'translateY(-50%)', color: '#fff', zIndex: 2, width: 60, height: 60}}
                     >
                         <ArrowBackIosNewIcon />
                     </IconButton>
 
                     <IconButton
                         onClick={handleNext} //botao proximo
-                        sx={{ backgroundColor: 'rgba(240, 248, 255, 0.6)', position: 'absolute', top: '50%', right: 8, transform: 'translateY(-50%)', color: '#fff', zIndex: 2, width: 60, height: 60}}
+                        sx={{ backgroundColor: 'rgba(240, 248, 255, 0.6)', position: 'absolute', top: '50%', right: 20, transform: 'translateY(-50%)', color: '#fff', zIndex: 2, width: 60, height: 60}}
                     >
                         <ArrowForwardIosIcon />
                     </IconButton>
