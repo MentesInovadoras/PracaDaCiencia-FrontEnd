@@ -82,30 +82,30 @@ const Galeria: React.FC = () => {
             <Dialog 
                 open={selectedIndex !== null} 
                 onClose={handleClose} 
-                maxWidth="md"
+                maxWidth={false}
                 PaperProps={{ 
-                    sx: { backgroundColor: 'transparent', boxShadow: 'none', overflow: 'hidden'} 
+                    sx: { backgroundColor: 'rgba(0, 0, 0, 0.9)', boxShadow: 'none', overflow: 'hidden'} 
                 }}
             >
-                <Box sx={{ position: 'relative', backgroundColor: '#000', p: 2 }}>
+                <Box sx={{ position: 'relative', p: 2, borderRadius: 2, display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100px'}}>
                     
                     <IconButton
-                        onClick={handleClose}
-                        sx={{ position: 'absolute', top: 8, right: 8, color: '#fff', zIndex: 2 }}
+                        onClick={handleClose} //botao fechar
+                        sx={{ backgroundColor: 'rgba(240, 248, 255, 0.6)', position: 'absolute', top: 8, right: 8, color: '#fff', zIndex: 2, width: 48, height: 48}}
                     >
                         <CloseIcon />
                     </IconButton>
 
                     <IconButton
-                        onClick={handlePrev}
-                        sx={{ position: 'absolute', top: '50%', left: 8, transform: 'translateY(-50%)', color: '#fff', zIndex: 2 }}
+                        onClick={handlePrev} //botao anterior
+                        sx={{ backgroundColor: 'rgba(240, 248, 255, 0.6)', position: 'absolute', top: '50%', left: 8, transform: 'translateY(-50%)', color: '#fff', zIndex: 2, width: 60, height: 60}}
                     >
                         <ArrowBackIosNewIcon />
                     </IconButton>
 
                     <IconButton
-                        onClick={handleNext}
-                        sx={{ position: 'absolute', top: '50%', right: 8, transform: 'translateY(-50%)', color: '#fff', zIndex: 2 }}
+                        onClick={handleNext} //botao proximo
+                        sx={{ backgroundColor: 'rgba(240, 248, 255, 0.6)', position: 'absolute', top: '50%', right: 8, transform: 'translateY(-50%)', color: '#fff', zIndex: 2, width: 60, height: 60}}
                     >
                         <ArrowForwardIosIcon />
                     </IconButton>
@@ -116,9 +116,12 @@ const Galeria: React.FC = () => {
                             style={{ 
                                 maxWidth: '80vw', 
                                 maxHeight: '80vh', 
+                                width: 'auto',
+                                height: 'auto',
                                 display: 'block', 
                                 margin: 'auto',
-                                opacity: fade ? 1 : 0,
+                                objectFit: 'contain',
+                                opacity: fade ? 10 : 0,
                                 transition: 'opacity 0.3s ease-in-out'
                             }}
                         />
