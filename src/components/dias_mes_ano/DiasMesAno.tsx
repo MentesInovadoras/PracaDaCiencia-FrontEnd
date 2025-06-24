@@ -11,12 +11,16 @@ interface DayObject {
   isMonday: boolean;
 }
 
-export default function DiasMesAno() {
+interface DiasMesAnoProps {
+  selectedDate: Date | null;
+  onSelectDate: (date: Date) => void;
+}
+
+export default function DiasMesAno({ selectedDate, onSelectDate }: DiasMesAnoProps) {
   const daysOfWeek = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'];
   const currentDate = new Date();
 
   const [startDate, setStartDate] = useState<Date>(new Date(currentDate.getFullYear(), currentDate.getMonth(), 1));
-  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
 
   function getDayOfWeek(date: Date): string {
     if (!(date instanceof Date)) {
@@ -51,7 +55,7 @@ export default function DiasMesAno() {
 
   const handleDayClick = (dayObj: DayObject | null) => {
     if (!dayObj || dayObj.isPast || dayObj.isMonday) return;
-    setSelectedDate(dayObj.date);
+    onSelectDate(dayObj.date);
   };
 
   const handleNextClick = () => {
