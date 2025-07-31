@@ -1,7 +1,7 @@
 // src/stores/index.tsx
 
 // Hook customizado para gerenciar o localStorage
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 interface LocalStorageStore<T> {
   value: T;
