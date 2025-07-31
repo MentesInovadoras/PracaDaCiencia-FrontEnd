@@ -15,7 +15,7 @@ const LandPage: React.FC = () =>
         textAlign: 'center',
       }}
     >
-      <Typography variant="h2" component="h1" gutterBottom>
+      <Typography variant="h2" component="h1" gutterBottom color='primary'>
         Bem-vindo à sua LandPage!
       </Typography>
       <Typography variant="body1">
