@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+
+    // Paths/Aliases
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
+    // Allow imports like: import x from './file.ts'
+    "allowImportingTsExtensions": true,
+
+    // No output from tsc (Vite handles bundling)
+    "noEmit": true,
+
+    // Type safety
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+
+    // Interop
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+
+    // Experimental bundler mode
+    "isolatedModules": true,
+    "useDefineForClassFields": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
