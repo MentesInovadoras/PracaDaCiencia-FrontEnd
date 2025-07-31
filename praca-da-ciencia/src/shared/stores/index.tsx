@@ -1,23 +1,37 @@
-import { create } from 'zustand'
-import { persist } from 'zustand/middleware'
+// src/stores/index.tsx
 
+// Hook customizado para gerenciar o localStorage
+import React, { useState, useEffect } from 'react';
 
-type AppState = {
-  theme: 'light' | 'dark'
-  toggleTheme: () => void
+interface LocalStorageStore<T> {
+  value: T;
+  setValue: (newValue: T) => void;
+  removeValue: () => void;
 }
 
-
-export const useAppStore = create<AppState>()(
-  persist(
-    (set, get) => ({
-      theme: 'light',
-      toggleTheme: () =>
-        set({ theme: get().theme === 'light' ? 'dark' : 'light' }),
-    }),
-    {
-      name: 'app-storage', // nome no localStorage
+export function useLocalStorage<T>(key: string, initialValue: T): LocalStorageStore<T> {
+  const [value, setValue] = useState<T>(() => {
+    try {
+      const storedValue = window.localStorage.getItem(key);
+      return storedValue ? JSON.parse(storedValue) : initialValue;
+    } catch (error) {
+      console.error('Error reading localStorage key “' + key + '”:', error);
+      return initialValue;
     }
-  )
-)
+  });
 
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(key, JSON.stringify(value));
+    } catch (error) {
+      console.error('Error setting localStorage key “' + key + '”:', error);
+    }
+  }, [key, value]);
+
+  const removeValue = () => {
+    window.localStorage.removeItem(key);
+    setValue(initialValue);
+  };
+
+  return { value, setValue, removeValue };
+}

@@ -1,14 +1,19 @@
-import { createBrowserRouter } from 'react-router-dom'
-import Home from '../layouts/landpage'
+// src/routes/index.tsx
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import LandPage from '../layouts/landpage';
+import type React from 'react';
+
+const AppRoutes: React.FC = () =>
+{
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
 
 
-export const router = createBrowserRouter(
-    [
-        {
-            path: '/',
-            element: <Home />,
-        },
-    ]
-)
-
+export default AppRoutes;
 

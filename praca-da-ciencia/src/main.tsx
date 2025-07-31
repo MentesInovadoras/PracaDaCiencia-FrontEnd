@@ -1,32 +1,13 @@
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import { ThemeProvider, createTheme } from '@mui/material/styles'
-import CssBaseline from '@mui/material/CssBaseline'
-import { BrowserRouter } from 'react-router-dom'
-import { useAppStore } from './shared/stores'
-import React from 'react'
+// src/main.tsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import AppRoutes from './shared/routes';
+import { AppThemeProvider } from './shared/themes';
 
-const Root = () => {
-  const themeMode = useAppStore((state) => state.theme)
-
-  const theme = createTheme({
-    palette: {
-      mode: themeMode,
-    },
-  })
-
-  return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </ThemeProvider>
-  )
-}
-
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <Root />
+    <AppThemeProvider>
+      <AppRoutes />
+    </AppThemeProvider>
   </React.StrictMode>
-)
+);
