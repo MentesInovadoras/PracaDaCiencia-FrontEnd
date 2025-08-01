@@ -1,6 +1,7 @@
 // src/layouts/landpage/index.tsx
 import { Box, Typography } from '@mui/material';
 import React from 'react';
+import SwitchThemeButton from "../../components/set_theme"
 
 const LandPage: React.FC = () =>
 {
@@ -15,6 +16,9 @@ const LandPage: React.FC = () =>
         textAlign: 'center',
       }}
     >
+      <SwitchThemeButton />
+
+
       <Typography variant="h2" component="h1" gutterBottom color='primary'>
         Bem-vindo à sua LandPage!
       </Typography>
