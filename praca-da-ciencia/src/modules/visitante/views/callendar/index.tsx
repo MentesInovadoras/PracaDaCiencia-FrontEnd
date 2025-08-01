@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import diasDisponiveisService from "../../service/DiasDisponiveisService";
 import dayjs from "dayjs";
 
+import './style.css'
+
 
 interface StepData
 {
@@ -86,13 +88,13 @@ const Horarios: React.FC = () =>
                         <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold', color: 'primary.main' }} align="center">
                             Selecione o dia da sua visita
                         </Typography>
-                        <DateCalendar
-                            disablePast
-                            shouldDisableDate={validateDate}
-                            onChange={getHorarios}
-                            sx={{ borderRadius: 2 }}
-                            maxDate={doisMesesDepois}
-                        />
+                            <DateCalendar
+                                disablePast
+                                shouldDisableDate={validateDate}
+                                onChange={getHorarios}
+                                className="customCalendarHeader"
+                                maxDate={doisMesesDepois}
+                            />
                     </CardContent>
                 </Card>
             </Box>
@@ -111,13 +113,15 @@ const Horarios: React.FC = () =>
                                         variant="contained"
                                         color="primary"
                                         sx={{
-                                            padding: '10px 20px',
-                                            borderRadius: 2,
-                                            '&:hover': {
-                                                backgroundColor: 'primary.dark',
-                                                boxShadow: 3,
-                                            },
-                                        }}
+                                                padding: '10px 20px',
+                                                borderRadius: 2,
+                                                '&:hover':
+                                                {
+                                                    backgroundColor: 'primary.dark',
+                                                    boxShadow: 3,
+                                                },
+                                                color: 'whitesmoke'
+                                            }}
                                         onClick={handleNext}
                                     >
                                         {horario}

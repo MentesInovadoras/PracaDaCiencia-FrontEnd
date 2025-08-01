@@ -1,0 +1,12 @@
+.customCalendarHeader
+{
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.customCalendarHeader .MuiPickersCalendarHeader-root
+{
+  background-color: var(--mui-primary-main);
+  color: white;
+}
+

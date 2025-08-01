@@ -6,21 +6,23 @@ export const lightTheme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#1976d2', // Azul padrão
+      main: '#FFCA28', // Amarelo dourado
     },
     secondary: {
-      main: '#9c27b0', // Roxo padrão
+      main: '#FF7043', // Laranja suave
     },
     warning: {
-      main: '#ff9800', // Laranja
+      main: '#FF5722', // Laranja intenso
     },
     success: {
-      main: '#4caf50', // Verde
+      main: '#4CAF50', // Verde
     },
     error: {
-      main: '#f44336', // Vermelho
+      main: '#F44336', // Vermelho
     },
-    // Adicionando cores 'lights' e 'darks' para complementar
+    info: {
+      main: '#2196F3', // Azul claro
+    },
     text: {
       primary: '#212121', // Texto escuro
       secondary: '#757575', // Texto secundário
@@ -33,6 +35,16 @@ export const lightTheme = createTheme({
   typography: {
     fontFamily: 'Roboto, sans-serif',
   },
+
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+          ':root': {
+            '--mui-primary-main': '#FFCA28',
+        }
+      }
+    }
+  }
 });
 
 // --- Cores para o tema escuro ---
@@ -40,32 +52,44 @@ export const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#90caf9', // Azul mais claro
+      main: '#FFB300FF', // Amarelo suave
     },
     secondary: {
-      main: '#ce93d8', // Roxo mais claro
+      main: '#FF8A65', // Laranja queimado
     },
     warning: {
-      main: '#ffb74d', // Laranja mais claro
+      main: '#FF7043', // Laranja suave
     },
     success: {
-      main: '#81c784', // Verde mais claro
+      main: '#81C784', // Verde suave
     },
     error: {
-      main: '#e57373', // Vermelho mais claro
+      main: '#D32F2F', // Vermelho escuro
     },
-    // Adicionando cores 'lights' e 'darks' para complementar
+    info: {
+      main: '#64B5F6', // Azul suave
+    },
     text: {
       primary: '#ffffff', // Texto claro
       secondary: '#bdbdbd', // Texto secundário
     },
     background: {
       default: '#121212', // Fundo escuro
-      paper: '#424242', // Fundo de componentes
+      paper: '#303030ff', // Fundo de componentes
     },
   },
   typography: {
     fontFamily: 'Roboto, sans-serif',
   },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        '@global': {
+          ':root': {
+            '--mui-primary-main': '#FFB300FF',
+          }
+        }
+      }
+    }
+  }
 });
-
