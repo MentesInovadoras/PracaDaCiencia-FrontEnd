@@ -1,16 +1,17 @@
-// src/services/api.ts
 import axios, { type AxiosInstance } from 'axios';
 
-// Acessa a variável de ambiente
-const apiBaseUrl = import.meta.env.VITE_API_URL;
 
-// Cria e exporta uma instância do Axios
 const api: AxiosInstance = axios.create({
-  baseURL: apiBaseUrl,
+  baseURL: import.meta.env.VITE_API_URL,
   headers: {
     'Content-Type': 'application/json',
   },
 });
 
+
+/**
+ * @constant
+ * constante que permite fazer requisições para o backend com qualquer método.
+ */
 export default api;
 
