@@ -15,10 +15,18 @@
     "@mdi/js": "^7.4.47",
     "@mdi/react": "^1.6.1",
     "@mui/material": "^7.2.0",
+    "@mui/utils": "^7.2.0",
+    "@mui/x-date-pickers": "^8.9.2",
+    "@mui/x-internals": "^8.9.2",
+    "@types/react-transition-group": "^4.4.12",
     "axios": "^1.11.0",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "dayjs": "^1.11.13",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router-dom": "^7.7.1"
+    "react-router-dom": "^7.7.1",
+    "react-transition-group": "^4.4.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
