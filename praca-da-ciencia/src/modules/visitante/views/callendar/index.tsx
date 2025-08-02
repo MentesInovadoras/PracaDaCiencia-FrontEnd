@@ -1,11 +1,11 @@
-import { Box, Button, Card, CardContent, Grid, Step, StepLabel, Stepper, Typography } from "@mui/material";
-import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
-import type { PickerValidDate } from "@mui/x-date-pickers/models";
-import { useEffect, useState } from "react";
+import { Box, Grid, Step, StepLabel, Stepper } from "@mui/material";
+import { useState } from "react";
 import diasDisponiveisService from "../../service/DiasDisponiveisService";
-import dayjs from "dayjs";
 
 import './style.css'
+
+import Calendario from "./components/calendario";
+import HorariosDisponiveis from "./components/horarios";
 
 
 interface StepData
@@ -15,10 +15,8 @@ interface StepData
 }
 
 
-
 const Horarios: React.FC = () =>
 {
-    const [diasIndisponivies, setDiasIndisponiveis] = useState<Date[]>([]);
     const [horarios, setHorarios] = useState<string[]>([]);
     const [stepsList, _] = useState<StepData[]>([
         {canBeActivated: true, label: 'Selecione o Horário'},
@@ -27,35 +25,19 @@ const Horarios: React.FC = () =>
     ]);
     const [activeStep, setActiveStep] = useState(0);
 
-    const doisMesesDepois = dayjs().add(2, 'month');
-
-    useEffect(
-        ()=>
-        {
-            // Este trecho é executado uma única vez durante a exibição do frontend
-            diasDisponiveisService.listIndisponiveis().then(setDiasIndisponiveis)
-        },
-        []
-    );
-
     const setStep = (index: number) =>
     {
         if(stepsList.at(index)?.canBeActivated)
             { setActiveStep(index); }
     } 
 
-    const validateDate = (day: PickerValidDate): boolean =>
+    const getHorarios = async (day?: Date) =>
     {
-        return diasIndisponivies.some(date => dayjs(date).isSame(day));
-    }
-
-    const getHorarios = async (day: PickerValidDate | null) =>
-    {
-        if(day == null)
+        if(day == undefined)
             { return; }
 
         diasDisponiveisService.
-        getHorariosDisponiveis(day.toDate()).
+        getHorariosDisponiveis(day).
         then(setHorarios);
     }
 
@@ -72,66 +54,19 @@ const Horarios: React.FC = () =>
     return (
         <Grid container spacing={5} sx={{ margin: '10px' }} justifyContent="center" alignItems="center">
             <Box sx={{ width: '100%' }}>
-            {/* Stepper de navegação */}
-            <Stepper activeStep={activeStep} alternativeLabel>
-                {stepsList.map((step, index) => (
-                <Step key={index}>
-                    <StepLabel onClick={()=>setStep(index)}>{step.label}</StepLabel>
-                </Step>
-                ))}
-            </Stepper>
+                {/* Stepper de navegação */}
+                <Stepper activeStep={activeStep} alternativeLabel>
+                    {stepsList.map((step, index) => (
+                    <Step key={index}>
+                        <StepLabel onClick={()=>setStep(index)}>{step.label}</StepLabel>
+                    </Step>
+                    ))}
+                </Stepper>
             </Box>
-            {/* Card para o Calendário */}
-            <Box sx={{ width: '100%', maxWidth: 600 }}>
-                <Card sx={{ borderRadius: 3, boxShadow: 3 }}>
-                    <CardContent sx={{minHeight: 450}}>
-                        <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold', color: 'primary.main' }} align="center">
-                            Selecione o dia da sua visita
-                        </Typography>
-                            <DateCalendar
-                                disablePast
-                                shouldDisableDate={validateDate}
-                                onChange={getHorarios}
-                                className="customCalendarHeader"
-                                maxDate={doisMesesDepois}
-                            />
-                    </CardContent>
-                </Card>
-            </Box>
+            
+            <Calendario onSelectDate={getHorarios} />
 
-            {/* Card para os Horários */}
-            <Box sx={{ width: '100%', maxWidth: 600 }}>
-                <Card sx={{ borderRadius: 3, boxShadow: 3 }}>
-                    <CardContent sx={{minHeight: 450}}>
-                        <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold', color: 'primary.main' }} align="center">
-                            Horários Disponíveis
-                        </Typography>
-                        <Grid container spacing={2} justifyContent="center">
-                            {horarios.map((horario, index) => (
-                                <Grid key={index}>
-                                    <Button
-                                        variant="contained"
-                                        color="primary"
-                                        sx={{
-                                                padding: '10px 20px',
-                                                borderRadius: 2,
-                                                '&:hover':
-                                                {
-                                                    backgroundColor: 'primary.dark',
-                                                    boxShadow: 3,
-                                                },
-                                                color: 'whitesmoke'
-                                            }}
-                                        onClick={handleNext}
-                                    >
-                                        {horario}
-                                    </Button>
-                                </Grid>
-                            ))}
-                        </Grid>
-                    </CardContent>
-                </Card>
-            </Box>
+            <HorariosDisponiveis onSelectHorario={handleNext} horarios={horarios} />
         </Grid>
     );
 }

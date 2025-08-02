@@ -10,3 +10,68 @@
   color: white;
 }
 
+.MuiDateCalendar-root
+{
+    min-height: 450px;
+    min-width: 500px;
+}
+
+.MuiDateCalendar-root span
+{
+    font-size: larger;
+}
+
+.MuiDateCalendar-root div
+{
+    font-size: larger;
+}
+
+.MuiDayCalendar-root button
+{
+    font-size: 100%;
+    min-width: 64px;
+    min-height: 64px;
+}
+
+div[role="gridcell"]
+{
+    min-width: 64px;
+    min-height: 64px;
+}
+
+span[role="columnheader"]
+{
+    margin-left: 16px;
+    margin-right: 34px;
+}
+
+div[role="row"]
+{
+    justify-content: start;
+}
+
+.Titulo
+{
+    font-weight: bold;
+    color: var(--mui-info-main);
+}
+
+
+.Botao
+{
+    padding: 10px, 20px;
+    border-radius: 2;
+    :hover
+    {
+        background-color: var(--mui-primary-dark);
+        box-shadow: 3;
+    };
+}
+
+
+.Cartao
+{
+    border-radius: 3;
+    box-shadow: 3;
+}
+
