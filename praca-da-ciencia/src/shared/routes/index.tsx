@@ -5,6 +5,7 @@ import type React from 'react';
 import GestaoRoutes from '../../modules/gestao/routes';
 import VisitanteRoutes from '../../modules/visitante/routes';
 
+
 const AppRoutes: React.FC = () =>
 {
   return (

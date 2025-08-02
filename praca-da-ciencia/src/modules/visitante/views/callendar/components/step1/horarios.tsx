@@ -1,7 +1,7 @@
 import { Box, Button, Card, CardContent, Grid, Typography } from "@mui/material";
 
 
-interface Props
+export interface Props
 {
     onSelectHorario: ()=>void;
     horarios: string[];

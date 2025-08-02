@@ -8,6 +8,7 @@
 {
   background-color: var(--mui-primary-main);
   color: white;
+  margin-top: 0;
 }
 
 .MuiDateCalendar-root
@@ -29,14 +30,25 @@
 .MuiDayCalendar-root button
 {
     font-size: 100%;
-    min-width: 64px;
-    min-height: 64px;
+    min-width: 50px;
+    min-height: 50px;
 }
 
 div[role="gridcell"]
 {
-    min-width: 64px;
-    min-height: 64px;
+    min-width: 50px;
+    min-height: 50px;
+}
+
+.MuiYearCalendar-root 
+{
+    min-width: auto;
+    min-height: auto;
+}
+
+.MuiYearCalendar-root button
+{
+    font-size: 100%;
 }
 
 span[role="columnheader"]
@@ -53,7 +65,7 @@ div[role="row"]
 .Titulo
 {
     font-weight: bold;
-    color: var(--mui-info-main);
+    color: var(--mui-primary-main);
 }
 
 

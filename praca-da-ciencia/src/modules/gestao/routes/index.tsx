@@ -1,13 +1,11 @@
 // src/routes/PrimeiroModuloRoutes.tsx
-import { Routes, Route } from 'react-router-dom';
-import { DashboardPage } from '../test';
+import { Routes } from 'react-router-dom';
 
 
 const GestaoRoutes = () =>
 {
   return (
     <Routes>
-      <Route path="/" element={<DashboardPage />} />
     </Routes>
   );
 }

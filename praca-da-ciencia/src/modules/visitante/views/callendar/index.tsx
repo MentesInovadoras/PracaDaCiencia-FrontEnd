@@ -1,11 +1,14 @@
 import { Box, Grid, Step, StepLabel, Stepper } from "@mui/material";
-import { useState } from "react";
+import { useState, type ReactElement } from "react";
 import diasDisponiveisService from "../../service/DiasDisponiveisService";
 
 import './style.css'
 
-import Calendario from "./components/calendario";
-import HorariosDisponiveis from "./components/horarios";
+import Calendario from "./components/step1/calendario";
+import HorariosDisponiveis from "./components/step1/horarios";
+import TipoVisita from "./components/step2/tipovisita";
+import type { FormularioEnum } from "./components/step3/formulario";
+import Formulario from "./components/step3/formulario";
 
 
 interface StepData
@@ -18,12 +21,16 @@ interface StepData
 const Horarios: React.FC = () =>
 {
     const [horarios, setHorarios] = useState<string[]>([]);
+    const [activeStep, setActiveStep] = useState(0);
+
     const [stepsList, _] = useState<StepData[]>([
         {canBeActivated: true, label: 'Selecione o Horário'},
+        {canBeActivated: false, label: 'Escolha o tipo de visita'},
         {canBeActivated: false, label: 'Forneça Informações Pessoais'},
         {canBeActivated: false, label: 'Aguarde o Dia Chegar'}
     ]);
-    const [activeStep, setActiveStep] = useState(0);
+
+    const [tipoFormulario, setTipoFormulario] = useState<FormularioEnum>("visita_individual");
 
     const setStep = (index: number) =>
     {
@@ -51,9 +58,37 @@ const Horarios: React.FC = () =>
         }
     }
 
+    const steps: ReactElement[] = [
+            (
+                <Grid
+                    container
+                    spacing={5}
+                    justifyContent="center"
+                    alignItems="center"
+                >
+                    <Grid><Calendario onSelectDate={getHorarios}/></Grid>
+                    <Grid><HorariosDisponiveis onSelectHorario={handleNext} horarios={horarios}/></Grid>
+                </Grid>
+            ),
+            <TipoVisita
+                selectedVisitaIndividual={()=>{setTipoFormulario("visita_individual"); handleNext();}}
+                selectedVisitaColetiva={()=>{setTipoFormulario("visita_coletiva"); handleNext();}}
+                selectedVisitaInstituicao={()=>{setTipoFormulario("visita_institucional"); handleNext();}}
+            />,
+            (
+                <Formulario tipoFormulario={tipoFormulario} />
+            ),
+            (
+                <>
+                    <h1>Parte 4</h1>
+                </>
+            )
+        ];
+
+
     return (
-        <Grid container spacing={5} sx={{ margin: '10px' }} justifyContent="center" alignItems="center">
-            <Box sx={{ width: '100%' }}>
+        <>
+            <Box sx={{ width: '100%', margin: '10px' }}>
                 {/* Stepper de navegação */}
                 <Stepper activeStep={activeStep} alternativeLabel>
                     {stepsList.map((step, index) => (
@@ -64,10 +99,8 @@ const Horarios: React.FC = () =>
                 </Stepper>
             </Box>
             
-            <Calendario onSelectDate={getHorarios} />
-
-            <HorariosDisponiveis onSelectHorario={handleNext} horarios={horarios} />
-        </Grid>
+                { steps[activeStep] }
+        </>
     );
 }
 

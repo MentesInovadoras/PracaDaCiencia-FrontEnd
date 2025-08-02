@@ -3,10 +3,10 @@ import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 import type { PickerValidDate } from "@mui/x-date-pickers/models";
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
-import diasDisponiveisService from "../../../service/DiasDisponiveisService";
+import diasDisponiveisService from "../../../../service/DiasDisponiveisService";
 
 
-interface Props
+export interface Props
 {
     onSelectDate: (selectedDate?: Date)=>void;
 }
