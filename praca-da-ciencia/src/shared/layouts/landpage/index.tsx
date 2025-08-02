@@ -2,6 +2,7 @@
 import { Box, Typography } from '@mui/material';
 import React from 'react';
 import SwitchThemeButton from "../../components/set_theme"
+import NavBar from "../../components/navbar"
 
 const LandPage: React.FC = () =>
 {
@@ -10,21 +11,30 @@ const LandPage: React.FC = () =>
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
         height: '100vh',
+        width: '100vw',
         textAlign: 'center',
       }}
     >
-      <SwitchThemeButton />
+      <NavBar/>
 
-
-      <Typography variant="h2" component="h1" gutterBottom color='primary'>
-        Bem-vindo à sua LandPage!
-      </Typography>
-      <Typography variant="body1">
-        Este é o layout da sua página inicial.
-      </Typography>
+      <Box
+      sx={{
+        alignContent:'center',
+        justifyContent:'center',
+        alignItems:'center',
+        height:'100%'
+      }}
+      >
+        <Typography variant="h2" component="h1" gutterBottom color='primary'>
+          Bem-vindo à sua LandPage!
+        </Typography>
+        <Typography variant="body1">
+          Este é o layout da sua página inicial.<br/>
+          Preencha como for conveniente
+        </Typography>
+      </Box>
+      
     </Box>
   );
 }

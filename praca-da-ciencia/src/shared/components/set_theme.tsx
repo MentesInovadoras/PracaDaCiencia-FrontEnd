@@ -1,5 +1,6 @@
 import { Grid, IconButton } from "@mui/material"
 import SunnyIcon from '@mui/icons-material/Sunny';
+import ModeNightIcon from '@mui/icons-material/ModeNight';
 import { useThemeContext } from "../context/ThemeContext"
 
 
@@ -10,14 +11,16 @@ const SwitchThemeButton: React.FC = () =>
 
     return (
         <Grid
-        container
-        justifyContent="center"
-        alignItems="center"
+            container  
+            justifyContent="center"
+            alignItems="center"
         >
             <IconButton
-            onClick={ toggleTheme }
+                onClick={ toggleTheme }
+                title={isDarkMode ? "Tema Escuro" : "Tema Claro" }
             >
-                <SunnyIcon />
+
+            {isDarkMode ? <ModeNightIcon/> : <SunnyIcon />}
                 
             </IconButton>
 
