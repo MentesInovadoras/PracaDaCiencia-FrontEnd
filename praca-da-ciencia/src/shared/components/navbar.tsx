@@ -32,13 +32,12 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          
           <NavLink to='/'>
             <Typography>
               <Logo sizeInPixels={50}/>
             </Typography>
           </NavLink>
-          
+
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -69,7 +68,7 @@ function ResponsiveAppBar() {
               >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <NavLink to={page}>
+                  <NavLink to={`/${page}`}>
                     <Typography sx={{ textAlign: 'center' }}
                     component='a'
 
@@ -80,12 +79,9 @@ function ResponsiveAppBar() {
             </Menu>
           </Box>
 
-
-
-          
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <NavLink to={page}>
+              <NavLink to={`/${page}`}>
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
@@ -93,11 +89,8 @@ function ResponsiveAppBar() {
                   {page}
                 </Button>
               </NavLink>
-                
-
             ))}
           </Box>
-
 
           <Box sx={{ flexGrow: 0.1}}>
             <SwitchThemeButton/>

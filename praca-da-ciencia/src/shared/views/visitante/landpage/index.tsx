@@ -1,8 +1,7 @@
 // src/layouts/landpage/index.tsx
 import { Box, Typography } from '@mui/material';
 import React from 'react';
-import SwitchThemeButton from "../../components/set_theme"
-import NavBar from "../../components/navbar"
+import NavBar from "../../../components/navbar"
 
 const LandPage: React.FC = () =>
 {
