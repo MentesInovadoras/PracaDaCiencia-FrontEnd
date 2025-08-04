@@ -14,7 +14,7 @@ import SwitchThemeButton from "./set_theme"
 import { NavLink } from "react-router-dom";
 
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['gestao', 'Pricing', 'Blog'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);

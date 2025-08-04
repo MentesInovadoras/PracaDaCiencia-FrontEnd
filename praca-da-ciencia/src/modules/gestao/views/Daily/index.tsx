@@ -3,7 +3,7 @@ import { Typography, Box, Card, CardContent, Input, InputLabel, TextField, Texta
 import CardView from '../../components/card';
 import Sidebar from '../../components/sidebar';
 
-export function DashboardPage() {
+export default function DashboardPage() {
   
   return (
     <Box>
