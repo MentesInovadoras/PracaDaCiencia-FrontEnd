@@ -1,4 +1,6 @@
-import { Button, Card, CardActionArea, CardContent, CardHeader, CardMedia, Typography } from "@mui/material";
+import { Card, CardActionArea, CardContent, CardHeader, CardMedia, Typography } from "@mui/material";
+
+import "@/shared/styles/CardActionAreaCentrilizer.css"
 
 
 interface Props
@@ -22,10 +24,10 @@ const VisitaCard: React.FC<Props> = ({title, descricao, src, maxWidith, onSelect
                     { descricao }
                 </Typography>
             </CardContent>
-            <CardActionArea>
-                <Button>
+            <CardActionArea className="card-action-center">
+                <Typography variant="button" color="primary">
                     Selecioar
-                </Button>
+                </Typography>
             </CardActionArea>
         </Card>
     )
