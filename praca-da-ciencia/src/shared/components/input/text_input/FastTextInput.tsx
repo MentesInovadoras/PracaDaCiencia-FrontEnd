@@ -19,6 +19,7 @@ interface Props
     mask?: Masker;
     size?: string;
     serviceKey?: keyof any;
+    disabled?: boolean;
 }
 
 
@@ -34,6 +35,7 @@ const FastTextInput: React.FC<Props> = ({
     size,
     mask,
     serviceKey,
+    disabled=false,
 }) =>
 {
     const [isInvalid, setIsInvalid] = useState(false);
@@ -103,6 +105,7 @@ const FastTextInput: React.FC<Props> = ({
                 onBlur={()=>setShowInfoHint(false)}
                 value={value}
                 sx={{ minWidth: 200 }}
+                disabled={disabled}
             />
         </InputWithLabel>
     )

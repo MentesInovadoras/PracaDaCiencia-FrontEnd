@@ -2,7 +2,7 @@ import type { FastSpecificTextInputProps } from "../scripts/types";
 import FastTextInput from "./FastTextInput";
 
 
-const FastOptionInput: React.FC<FastSpecificTextInputProps> = ({ required=false, onChange, startValue, variant, serviceKey }) =>
+const FastOptionInput: React.FC<FastSpecificTextInputProps> = ({ required=false, onChange, startValue, variant, serviceKey, disabled }) =>
 {
     return (
         <FastTextInput
@@ -13,6 +13,7 @@ const FastOptionInput: React.FC<FastSpecificTextInputProps> = ({ required=false,
             startValue={startValue}
             variant={variant}
             serviceKey={serviceKey}
+            disabled={disabled}
         />
     )
 }

@@ -9,6 +9,7 @@ export interface FastSpecificTextInputProps
     variant?: TextFieldVariants;
     size?: string;
     serviceKey?: keyof any;
+    disabled?: boolean;
 }
 
 

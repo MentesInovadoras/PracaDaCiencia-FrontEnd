@@ -3,7 +3,7 @@ import { validateEmail } from "../scripts/validators";
 import FastTextInput from "./FastTextInput";
 
 
-const FastEmailInput: React.FC<FastSpecificTextInputProps> = ({ required=false, onChange, startValue, variant, size, serviceKey }) =>
+const FastEmailInput: React.FC<FastSpecificTextInputProps> = ({ required=false, onChange, startValue, variant, size, serviceKey, disabled }) =>
 {
     return (
         <FastTextInput
@@ -17,6 +17,7 @@ const FastEmailInput: React.FC<FastSpecificTextInputProps> = ({ required=false, 
             validators={[validateEmail]}
             size={size}
             serviceKey={serviceKey}
+            disabled={disabled}
         />
     )
 }

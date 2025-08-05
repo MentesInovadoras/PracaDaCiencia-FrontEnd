@@ -4,7 +4,7 @@ import { validateTelefone } from "../scripts/validators";
 import FastTextInput from "./FastTextInput";
 
 
-const FastNumberInput: React.FC<FastSpecificTextInputProps> = ({ required=true, onChange, startValue, variant, size, serviceKey }) =>
+const FastNumberInput: React.FC<FastSpecificTextInputProps> = ({ required=true, onChange, startValue, variant, size, serviceKey, disabled }) =>
 {
     return (
         <FastTextInput
@@ -19,6 +19,7 @@ const FastNumberInput: React.FC<FastSpecificTextInputProps> = ({ required=true, 
             variant={variant}
             size={size}
             serviceKey={serviceKey}
+            disabled={disabled}
         />
     )
 }
