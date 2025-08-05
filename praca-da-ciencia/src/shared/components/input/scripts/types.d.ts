@@ -8,6 +8,7 @@ export interface FastSpecificTextInputProps
     startValue?: string;
     variant?: TextFieldVariants;
     size?: string;
+    serviceKey?: keyof any;
 }
 
 

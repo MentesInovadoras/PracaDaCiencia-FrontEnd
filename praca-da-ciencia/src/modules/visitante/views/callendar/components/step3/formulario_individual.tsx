@@ -11,10 +11,10 @@ const FormularioIndividual: React.FC = () =>
 {
     return (
         <FastForm
-            onSubmit={()=>{console.log(service)}}
             title="Suas Informações"
             submitButtonTitle="Confirmar"
             onClickCancel={()=>{console.log("clicou cancelar")}}
+            service={service}
         >
             <SimpleRow title="Sobre Você" divider>
                 <FastTextInput
@@ -22,8 +22,7 @@ const FormularioIndividual: React.FC = () =>
                     label="Nome Completo"
                     placeholder="João da Silva"
                     size="45%"
-                    onChange={nv=>service.setEntityKey("nome_visitante", nv)}
-                    startValue={service.entity.nome_visitante}
+                    serviceKey={"nome_visitante"}
                 />
                 { /* TODO: FastComboBox */ }
                 <FastTextInput
@@ -31,12 +30,12 @@ const FormularioIndividual: React.FC = () =>
                     placeholder="Vitória"
                     helpText="Se for de outro estado, escreva a sigla (exemplo: Juiz de Fora (MG))"
                     size="45%"
-                    service={{ service: service, key: "CEP_visitante" }}
+                    serviceKey={"CEP_visitante"}
                 /> 
             </SimpleRow>
 
             <SimpleRow title="Contatos" divider>
-                <FastNumberInput size="20%" onChange={nv=>service.setEntityKey("telefone_visitante", nv)}/>  
+                <FastNumberInput size="20%" serviceKey={"telefone_visitante"}/>  
                 <FastEmailInput required size="60%" onChange={nv=>service.setEntityKey("email_visitante", nv)}/>
             </SimpleRow>
             <FastOptionInput />

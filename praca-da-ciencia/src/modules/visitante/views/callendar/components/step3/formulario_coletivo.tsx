@@ -1,4 +1,3 @@
-import service from "@/modules/visitante/service/VisitaService";
 import FastForm from "@/shared/components/input/fast_form";
 import InputWithLabel from "@/shared/components/input/InputWithLabel";
 import FastEmailInput from "@/shared/components/input/text_input/FastEmailInput";
@@ -24,7 +23,7 @@ const FormularioColetivo: React.FC = () =>
     }
 
     return(
-    <FastForm onSubmit={()=>{}} title="Dados do Responsável">
+    <FastForm onSubmit={()=>{}} title="Dados do Responsável" service={service}>
         <SimpleRow title="Sobre Você" divider>
             <FastTextInput
                 required
@@ -32,7 +31,7 @@ const FormularioColetivo: React.FC = () =>
                 label="Nome Completo"
                 placeholder="João da Silva"
                 size="45%"
-                service={{service: service, key: "nome_visitante"}}
+                key={'nome_visitante'}
             />
             <FastTextInput
                 label="Município de Origem"

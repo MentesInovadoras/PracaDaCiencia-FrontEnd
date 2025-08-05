@@ -1,4 +1,3 @@
-// src/context/ThemeContext.tsx
 import React, { createContext, useState, useMemo, useContext } from 'react';
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import { darkTheme } from '../themes/dark';

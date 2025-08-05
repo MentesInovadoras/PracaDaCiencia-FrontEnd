@@ -3,15 +3,7 @@ import InputWithLabel from "../InputWithLabel";
 import { useEffect, useState } from "react";
 import type { Masker, ValidateFunction } from "../scripts/types";
 import { cantBeEmpty } from "../scripts/validators";
-import type { WriteService } from "@/shared/service/repository/WriteService";
-import type { BaseEntity } from "@/shared/service/types";
-
-
-interface ConfigureService<T extends BaseEntity>
-{
-    service: WriteService<T>;
-    key: keyof T;
-}
+import { useServiceContext } from "@/shared/context/ServiceContext";
 
 
 interface Props
@@ -26,38 +18,44 @@ interface Props
     startValue?: string;
     mask?: Masker;
     size?: string;
-    service?: ConfigureService<any>;
+    serviceKey?: keyof any;
 }
 
 
 const FastTextInput: React.FC<Props> = ({
-    label = "",
+    label,
     placeholder,
     required = false,
     variant="filled",
     onChange,
     validators = [],
-    helpText,
-    startValue="",
+    helpText="",
+    startValue,
     size,
     mask,
-    service,
+    serviceKey,
 }) =>
 {
     const [isInvalid, setIsInvalid] = useState(false);
     const [helpperText, setHelpperText] = useState(helpText);
     const [showInfoHint, setShowInfoHint] = useState(false);
-    const [value, setValue] = useState(startValue);
+    const [value, setValue] = useState(mask == undefined ? (startValue??"") : startValue==undefined ? "" : mask.add(startValue));
+    const service = useServiceContext();
 
     useEffect(
         ()=>
         {
-            if(service != undefined)
-                { setValue(service.service.entity[service.key]); }
+            if(service.service != undefined && serviceKey != undefined)
+            {
+                const keyValue = service.service.entity[serviceKey];
+                if(keyValue != undefined)
+                {
+                    mask == undefined ? setValue(keyValue) : setValue(mask.add(keyValue));
+                }
+            }
         },
         []
     )
-
 
     const checkValidation = (func: ValidateFunction, obj: string): boolean =>
     {
@@ -74,10 +72,10 @@ const FastTextInput: React.FC<Props> = ({
 
     const handleChange = (obj: string) =>
     {
-        if(onChange)
+        if(onChange != undefined)
             { onChange(obj); }
-        if(service != undefined)
-            { service.service.setEntityKey(service.key, obj); }
+        if(service.service != undefined && serviceKey != undefined)
+            { service.service.setEntityKey(serviceKey, obj); }
 
         setValue(mask?.add(obj)??obj); 
 
