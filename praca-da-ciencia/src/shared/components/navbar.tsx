@@ -13,10 +13,15 @@ import Logo from './logo';
 import SwitchThemeButton from "./set_theme"
 import { NavLink } from "react-router-dom";
 
+export interface Pages {
+  page?: string[];
+  height?: string; 
+}
 
-const pages = ['gestao', 'Pricing', 'Blog'];
-
-function ResponsiveAppBar() {
+function ResponsiveAppBar({
+  pages = ['gestao', 'Pricing', 'Blog'],
+  height = '',
+}) {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -29,7 +34,7 @@ function ResponsiveAppBar() {
 
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{height: {height}}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <NavLink to='/'>
