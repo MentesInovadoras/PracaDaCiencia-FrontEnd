@@ -1,8 +1,17 @@
 import { TextField, type TextFieldVariants } from "@mui/material";
 import InputWithLabel from "../InputWithLabel";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { Masker, ValidateFunction } from "../scripts/types";
 import { cantBeEmpty } from "../scripts/validators";
+import type { WriteService } from "@/shared/service/repository/WriteService";
+import type { BaseEntity } from "@/shared/service/types";
+
+
+interface ConfigureService<T extends BaseEntity>
+{
+    service: WriteService<T>;
+    key: keyof T;
+}
 
 
 interface Props
@@ -16,6 +25,8 @@ interface Props
     helpText?: string;
     startValue?: string;
     mask?: Masker;
+    size?: string;
+    service?: ConfigureService<any>;
 }
 
 
@@ -28,13 +39,24 @@ const FastTextInput: React.FC<Props> = ({
     validators = [],
     helpText,
     startValue="",
+    size,
     mask,
+    service,
 }) =>
 {
     const [isInvalid, setIsInvalid] = useState(false);
     const [helpperText, setHelpperText] = useState(helpText);
     const [showInfoHint, setShowInfoHint] = useState(false);
     const [value, setValue] = useState(startValue);
+
+    useEffect(
+        ()=>
+        {
+            if(service != undefined)
+                { setValue(service.service.entity[service.key]); }
+        },
+        []
+    )
 
 
     const checkValidation = (func: ValidateFunction, obj: string): boolean =>
@@ -54,6 +76,9 @@ const FastTextInput: React.FC<Props> = ({
     {
         if(onChange)
             { onChange(obj); }
+        if(service != undefined)
+            { service.service.setEntityKey(service.key, obj); }
+
         setValue(mask?.add(obj)??obj); 
 
         const nonMaskedObject = mask?.remove(obj)??obj;
@@ -67,17 +92,19 @@ const FastTextInput: React.FC<Props> = ({
         <InputWithLabel
             label={label}
             required={required}
+            size={size} 
         >
             <TextField
                 error={isInvalid}
                 required={required}
-                placeholder={`Ex. ${placeholder}`}
+                placeholder={placeholder?`Ex. ${placeholder}`:''}
                 variant={variant}
                 onChange={event=>handleChange(event.target.value)}
                 helperText={ (showInfoHint||isInvalid) ? helpperText : ''}
                 onClick={()=>setShowInfoHint(true)}
                 onBlur={()=>setShowInfoHint(false)}
                 value={value}
+                sx={{ minWidth: 200 }}
             />
         </InputWithLabel>
     )

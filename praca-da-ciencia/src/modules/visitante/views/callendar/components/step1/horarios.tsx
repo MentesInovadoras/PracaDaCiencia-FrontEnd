@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardContent, Grid, Typography } from "@mui/material";
+import { Box, Button, Card, CardContent, CardHeader, Grid, Typography } from "@mui/material";
 
 
 export interface Props
@@ -12,17 +12,9 @@ const HorariosDisponiveis: React.FC<Props> = ({ onSelectHorario, horarios }) =>
 {
     return (
         <Box sx={{ width: '100%', maxWidth: 600 }}>
-            <Card className="Cartao">
+            <Card>
+                <CardHeader title="Horários Disponíveis" />
                 <CardContent sx={{ minHeight: 450 }}>
-                    <Typography
-                        gutterBottom
-                        className="Titulo"
-                        variant="h4"
-                        align="center"
-                    >
-                        Horários Disponíveis
-                    </Typography>
-
                     <Grid container spacing={2} justifyContent="center">
                         {
                             horarios.map(

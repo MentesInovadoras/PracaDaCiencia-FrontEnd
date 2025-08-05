@@ -4,7 +4,7 @@ import { validateCPF } from "../scripts/validators";
 import FastTextInput from "./FastTextInput";
 
 
-const FastCPFInput: React.FC<FastSpecificTextInputProps> = ({ required=true, onChange, startValue, variant="filled" }) =>
+const FastCPFInput: React.FC<FastSpecificTextInputProps> = ({ required=true, onChange, startValue, variant, size }) =>
 {
     return (
         <FastTextInput
@@ -17,6 +17,7 @@ const FastCPFInput: React.FC<FastSpecificTextInputProps> = ({ required=true, onC
             onChange={onChange}
             startValue={startValue}
             variant={variant}
+            size={size}
         />
     )
 }

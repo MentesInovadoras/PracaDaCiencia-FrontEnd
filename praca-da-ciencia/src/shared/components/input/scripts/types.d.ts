@@ -7,6 +7,7 @@ export interface FastSpecificTextInputProps
     onChange?: (str: string) => void;
     startValue?: string;
     variant?: TextFieldVariants;
+    size?: string;
 }
 
 

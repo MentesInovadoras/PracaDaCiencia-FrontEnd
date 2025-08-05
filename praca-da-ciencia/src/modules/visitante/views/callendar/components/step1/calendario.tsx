@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Typography } from "@mui/material";
+import { Box, Card, CardContent, CardHeader, Typography } from "@mui/material";
 import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 import type { PickerValidDate } from "@mui/x-date-pickers/models";
 import { useEffect, useState } from "react";
@@ -33,17 +33,9 @@ const Calendario: React.FC<Props> = ({ onSelectDate }) =>
 
     return (
         <Box sx={{ width: '100%', maxWidth: 600 }}>
-            <Card className="Cartao">
+            <Card>
+                <CardHeader title="Selecione o dia da sua visita"/>
                 <CardContent sx={{ minHeight: 450 }}>
-                    <Typography
-                        gutterBottom
-                        variant="h4"
-                        className="Titulo"
-                        align="center"
-                    >
-                        Selecione o dia da sua visita
-                    </Typography>
-
                     <DateCalendar
                         disablePast
                         shouldDisableDate={validateDate}

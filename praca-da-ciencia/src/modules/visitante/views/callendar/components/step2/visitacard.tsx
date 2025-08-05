@@ -16,8 +16,8 @@ interface Props
 const VisitaCard: React.FC<Props> = ({title, descricao, src, maxWidith, onSelect}) =>
 {
     return (
-        <Card sx={{ border: '10px', cursor: "pointer", maxWidth:maxWidith }} onClick={onSelect}>
-            <CardHeader title={title} color="primary" />
+        <Card sx={{ border: '10px', cursor: "pointer", maxWidth:maxWidith, minWidth: 250 }} onClick={onSelect}>
+            <CardHeader title={title} />
             <CardMedia component={"img"} sx={{maxWidth:'auto'}} image={src}/>
             <CardContent>
                 <Typography>

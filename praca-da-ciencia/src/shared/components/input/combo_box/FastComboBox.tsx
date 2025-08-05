@@ -26,14 +26,14 @@ const FastComboBox: React.FC = () =>
             label="Label"
         >
             <Autocomplete
-                value={value}
-                options={optionsList}
-                renderInput={(params) => <TextField {...params} label="Movie" />}
                 freeSolo
-                selectOnFocus
                 clearOnBlur
+                value={value}
+                selectOnFocus
                 handleHomeEndKeys
+                options={optionsList}
                 getOptionLabel={getOptionLabel}
+                renderInput={(params) => <TextField {...params} label="Movie" />}
             />
         </InputWithLabel>
     )
