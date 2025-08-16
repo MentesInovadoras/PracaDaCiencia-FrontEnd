@@ -23,7 +23,7 @@ const HorariosDisponiveis: React.FC<Props> = ({ onSelectHorario, horarios }) =>
                                     <Grid size={12} key={index} textAlign={"center"}>
                                         <Button
                                             variant="contained"
-                                            color="primary"
+                                            color="info"
                                             className="Botao"
                                             sx={{ color: 'whitesmoke' }}
                                             onClick={onSelectHorario}

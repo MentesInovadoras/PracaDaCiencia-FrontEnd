@@ -1,8 +1,7 @@
-import * as React from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import Paper from "@mui/material/Paper";
 import type { GridColDef } from "@mui/x-data-grid";
-import { useNavigate, NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 /* TODO: Falta o redirecionamento para uma página dedicada */
 

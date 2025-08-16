@@ -3,6 +3,7 @@ import Daily from "../views/Daily";
 import Weekly from "../views/Weekly";
 import PageNotFound from "@/shared/views/page_not_found";
 import Forms from "../views/forms";
+import GestaoInternaRoutes from "./gestao_interna";
 
 const GestaoRoutes = () => {
   return (
@@ -12,6 +13,7 @@ const GestaoRoutes = () => {
       <Route path="/daily" element={<Daily />} />
       <Route path="/weekly" element={<Weekly />} />
       <Route path="/forms/*" element={<Forms />} />
+      <Route path="/gestao_interna/*" element={<GestaoInternaRoutes />} />
       <Route path="/*" element={<PageNotFound />} />
     </Routes>
   );

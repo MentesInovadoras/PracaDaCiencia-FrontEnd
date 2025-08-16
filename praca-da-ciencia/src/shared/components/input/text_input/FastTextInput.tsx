@@ -1,12 +1,14 @@
-import { TextField, type TextFieldVariants } from "@mui/material";
+import { TextField, type SxProps, type TextFieldVariants, type Theme } from "@mui/material";
 import InputWithLabel from "../InputWithLabel";
 import { useEffect, useState } from "react";
 import type { Masker, ValidateFunction } from "../scripts/types";
 import { cantBeEmpty } from "../scripts/validators";
 import { useServiceContext } from "@/shared/context/ServiceContext";
+import { SimpleCrudService } from "@/shared/service/repository/SimpleCrudServie";
+import type { BaseEntity } from "@/shared/service/types";
 
 
-interface Props
+interface Props<T extends BaseEntity>
 {
     label?: string;
     placeholder?: string;
@@ -18,12 +20,13 @@ interface Props
     startValue?: string;
     mask?: Masker;
     size?: string;
-    serviceKey?: keyof any;
+    serviceKey?: keyof T;
     disabled?: boolean;
+    sx?: SxProps<Theme>;
 }
 
 
-const FastTextInput: React.FC<Props> = ({
+const FastTextInput = <T extends BaseEntity>({
     label,
     placeholder,
     required = false,
@@ -36,23 +39,25 @@ const FastTextInput: React.FC<Props> = ({
     mask,
     serviceKey,
     disabled=false,
-}) =>
+    sx,
+}: Props<T>) =>
 {
     const [isInvalid, setIsInvalid] = useState(false);
     const [helpperText, setHelpperText] = useState(helpText);
     const [showInfoHint, setShowInfoHint] = useState(false);
     const [value, setValue] = useState(mask == undefined ? (startValue??"") : startValue==undefined ? "" : mask.add(startValue));
-    const service = useServiceContext();
+    const service = useServiceContext<T>();
 
     useEffect(
         ()=>
         {
             if(service.service != undefined && serviceKey != undefined)
             {
-                const keyValue = service.service.entity[serviceKey];
+                const keyValue = service.service instanceof SimpleCrudService ? service.service.getEntity()[serviceKey] : service.service.entity[serviceKey];
+
                 if(keyValue != undefined)
                 {
-                    mask == undefined ? setValue(keyValue) : setValue(mask.add(keyValue));
+                    mask == undefined ? setValue(keyValue.toLocaleString()) : setValue(mask.add(keyValue.toLocaleString()));
                 }
             }
         },
@@ -104,7 +109,7 @@ const FastTextInput: React.FC<Props> = ({
                 onClick={()=>setShowInfoHint(true)}
                 onBlur={()=>setShowInfoHint(false)}
                 value={value}
-                sx={{ minWidth: 200 }}
+                sx={sx}
                 disabled={disabled}
             />
         </InputWithLabel>

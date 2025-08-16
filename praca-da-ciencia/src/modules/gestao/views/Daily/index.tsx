@@ -10,14 +10,15 @@ import {
   TextareaAutosize,
 } from "@mui/material";
 import CardView from "../../components/card";
-import Sidebar from "../../components/sidebar";
+import VerticalSideBar from "@/shared/components/nav_bar/vertical_navbar";
+import gestaoNavItems from "../../const/GestaoNavIItems";
 
 const drawerWidth = 240;
 
 export default function DashboardPage() {
   return (
     <Box>
-      <Sidebar drawerWidth={drawerWidth} />
+      <VerticalSideBar items={gestaoNavItems} drawerWidth={drawerWidth} />
       <Box
         sx={{
           display: "grid",

@@ -1,5 +1,7 @@
 import { useServiceContext } from "@/shared/context/ServiceContext";
+import type { SimpleCrudService } from "@/shared/service/repository/SimpleCrudServie";
 import type { WriteService } from "@/shared/service/repository/WriteService";
+import type { BaseEntity } from "@/shared/service/types";
 import { Box, Button, Card, CardActions, CardContent, CardHeader, Typography } from "@mui/material";
 import { useEffect, type ReactNode } from "react";
 
@@ -7,7 +9,7 @@ import { useEffect, type ReactNode } from "react";
 export type EnumFormSubmmitTypes = "full_save" | "economic_save";
 
 
-export interface Props
+export interface Props<T extends BaseEntity>
 {
     id?: string;
     title?: string;
@@ -17,12 +19,24 @@ export interface Props
     onClickCancel?: () => void;
     submitType?: EnumFormSubmmitTypes;
 
-    service: WriteService<any>;
+    service: WriteService<T> | SimpleCrudService<T>;
     children: ReactNode;
 }
 
 
-const Provider: React.FC<Props> = ({ onSubmit, title, submitButtonTitle, cancelButtonTitle, onClickCancel, id="form", submitType = "economic_save", service, children }) =>
+const Provider = <T extends BaseEntity>(
+    {
+        onSubmit,
+        title,
+        submitButtonTitle,
+        cancelButtonTitle,
+        onClickCancel,
+        id = "form",
+        submitType = "economic_save",
+        service,
+        children
+    }: Props<T>
+    ) =>
 {
     const serviceContext = useServiceContext();
 

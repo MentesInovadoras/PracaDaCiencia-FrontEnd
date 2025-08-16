@@ -1,36 +1,38 @@
-import { createContext, useContext, useState, type ReactNode } from "react";
+import { createContext, useContext, useState } from "react";
 import { WriteService } from "../service/repository/WriteService";
+import type { SimpleCrudService } from "../service/repository/SimpleCrudServie";
+import type { BaseEntity } from "../service/types";
 
 
-export interface ServiceProps
+export interface ServiceProps<T extends BaseEntity>
 {
-    service?: WriteService<any>;
-    setService: (service: WriteService<any>) => void;
+    service?: WriteService<T>|SimpleCrudService<T>;
+    setService: (service: WriteService<T> | SimpleCrudService<T>) => void;
 }
 
-const ServiceContext = createContext<ServiceProps | undefined>(undefined);
+const ServiceContext = createContext<ServiceProps<any> | undefined>(undefined);
 
 
-interface Props
+interface Props<T extends BaseEntity>
 {
-    children: ReactNode;
+    children: (context: ServiceProps<T>) => React.ReactNode;
 }
 
 
-export const AppServiceProvider: React.FC<Props> = ({ children }) =>
+export const AppServiceProvider = <T extends BaseEntity>({ children }: Props<T>) =>
 {
-    const [service, setService] = useState<WriteService<any>>();
+    const [service, setService] = useState<WriteService<T>|SimpleCrudService<T>>();
 
     
     return(
         <ServiceContext.Provider value={{ service, setService }}>
-            { children }
+            { children({ service, setService }) }
         </ServiceContext.Provider>
     )
 }
 
 
-export const useServiceContext = () =>
+export const useServiceContext = <T extends BaseEntity>(): ServiceProps<T> =>
 {
   const context = useContext(ServiceContext);
   if (context === undefined)

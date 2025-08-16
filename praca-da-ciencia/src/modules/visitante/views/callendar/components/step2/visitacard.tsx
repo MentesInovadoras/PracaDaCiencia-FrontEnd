@@ -25,7 +25,7 @@ const VisitaCard: React.FC<Props> = ({title, descricao, src, maxWidith, onSelect
                 </Typography>
             </CardContent>
             <CardActionArea className="card-action-center">
-                <Typography variant="button" color="primary">
+                <Typography variant="button" color="info">
                     Selecioar
                 </Typography>
             </CardActionArea>

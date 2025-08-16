@@ -10,7 +10,7 @@ export class BaseService
 
     public constructor(urlRef: string)
     {
-        this.url = urlRef;
+        this.url = `${urlRef}/`;
     }
 }
 
