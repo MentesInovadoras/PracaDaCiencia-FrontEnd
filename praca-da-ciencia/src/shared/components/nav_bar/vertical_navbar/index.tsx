@@ -18,7 +18,7 @@ export interface Props
 const VerticalSideBar: React.FC<Props> = ({ items, drawerWidth }) =>
 {
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex"}}>
       <Drawer
         sx={{
           width: drawerWidth,
@@ -32,8 +32,9 @@ const VerticalSideBar: React.FC<Props> = ({ items, drawerWidth }) =>
         variant="permanent"
         anchor="left"
       >
+        <br/>
         <Logo sizeInPixels={150} />
-        
+        <br/>
         { items.map(i => <NavItem key={i.label} {...i}/>) }
         
         <SwitchThemeButton />

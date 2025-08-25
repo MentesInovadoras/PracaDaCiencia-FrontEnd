@@ -11,7 +11,7 @@ export interface ColumnData<T extends GridValidRowModel, K extends keyof T = key
     headerName: string;
     valueFormatter?: (value: (T[K] | undefined)) => string;
     renderCell?: (params: GridRenderCellParams<T>) => ReactNode;
-    felx?: number;
+    flex?: number;
     width?: number;
 }
 

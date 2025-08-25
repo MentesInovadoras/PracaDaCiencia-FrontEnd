@@ -4,11 +4,12 @@ import Weekly from "../views/Weekly";
 import PageNotFound from "@/shared/views/page_not_found";
 import Forms from "../views/forms";
 import GestaoInternaRoutes from "./gestao_interna";
+import BasePage from "../views/basePage"
 
 const GestaoRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Daily />} />{" "}
+      <Route path="/" element={<BasePage />} />{" "}
       {/* TODO: Trocar rota posteriormente */}
       <Route path="/daily" element={<Daily />} />
       <Route path="/weekly" element={<Weekly />} />

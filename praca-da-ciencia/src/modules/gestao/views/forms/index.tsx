@@ -1,8 +1,7 @@
 //Página criada exclusivamente para servir de base para outras páginas
 import { Typography, Box } from "@mui/material";
 import Sidebar from "../../components/sidebar";
-
-const drawerWidth = 240;
+import drawerWidth from "../../const/drawerWidth";
 
 export default function DashboardPage() {
   return (

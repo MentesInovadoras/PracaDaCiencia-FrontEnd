@@ -8,34 +8,65 @@ import {
   Card,
   CardContent,
   Input,
-  InputLabel,
   TextField,
   TextareaAutosize,
   IconButton,
   Tooltip,
+  Checkbox,
+  Autocomplete,
 } from "@mui/material";
 import { NavLink } from "react-router-dom";
-import { OpenInNew, Visibility, Edit } from "@mui/icons-material";
+import { Co2Sharp, OpenInNew } from "@mui/icons-material";
+import type { Guia } from "../types/Guia";
+import { GuiaWriteService } from "../service/GuiaService";
+import { useEffect } from "react";
+import { isId } from "@/shared/utils/ServiceTypesCheckers";
+import type { VisitaInstituicaoRead, VisitaPessoaRead, VisitaRead } from "../types/Visitas";
+import GuiaList from "./guia_list";
+import { VisitaWriteService } from "../service/VisitasService";
 
 interface Props {
-  id?: ID;
+  visitaData: VisitaRead;
+  horario: string;
+  responsavel: string;
+  instituicao: boolean;
   lock_edit?: boolean;
-  horario?: string;
-  responsavel?: string;
-  instituicao?: string;
   observacoes?: string;
-  guia?: string;
+  guia?: Guia;
+  guiaList?: Guia[];
+  guiaWriter?: Guia | ID;
 }
 
 const CardView: React.FC<Props> = ({
-  id = undefined,
+  visitaData,
   lock_edit = true,
   horario = "08:00",
   responsavel = "",
-  instituicao = "",
+  instituicao,
   observacoes = "",
-  guia = "Não definido",
+  guia,
+  guiaList = [],
+  guiaWriter,
 }) => {
+  const service = new VisitaWriteService();
+
+  useEffect(
+    () =>
+    {
+      if(visitaData.tipo_visitante == "Pessoa Física")
+        { service.setEntity(visitaData as VisitaPessoaRead); }
+      else
+        { service.setEntity(visitaData as VisitaInstituicaoRead); }
+    },
+    []
+  );
+
+  async function fastSaveGuia(guia: Guia)
+  {
+    service.setEntityKey('guia', guia);
+    await service.economicSave();
+  }
+
   return (
     <Card
       sx={{
@@ -48,11 +79,11 @@ const CardView: React.FC<Props> = ({
       }}
     >
       {/* Botão de navegação no canto superior direito */}
-      {id && id !== undefined && (
+      {guia?.id && guia.id !== undefined && (
         <Tooltip title="Ver detalhes" placement="left">
           <Box sx={{ position: "absolute", top: 15, right: 15 }}>
             <NavLink
-              to={`/gestao/forms/${id}`}
+              to={`/gestao/forms/${guia?.id}`}
               style={{ textDecoration: "none" }}
             >
               <IconButton
@@ -88,21 +119,13 @@ const CardView: React.FC<Props> = ({
           }}
         >
           <Box>
-            <Typography variant="body1">Horário</Typography>
+            <Typography variant="body1">Horário Inicial</Typography>
             <Box
               sx={{
                 display: "flex",
                 gap: "10px",
               }}
             >
-              <Input
-                type="time"
-                disabled={lock_edit}
-                defaultValue={horario}
-                placeholder="HH-MM"
-                sx={{ maxWidth: "100px" }}
-              />
-              -
               <Input
                 type="time"
                 disabled={lock_edit}
@@ -117,20 +140,29 @@ const CardView: React.FC<Props> = ({
             <Input type="number" disabled={lock_edit} defaultValue={horario} />
           </Box>
         </Box>
-        <Box>
-          <Typography>Visitante responsável</Typography>
-          <Input type="text" disabled={lock_edit} defaultValue={responsavel} />
+        <Box
+          sx={{
+            display: "flex",
+            gap: "20px",
+            justifyContent: "space-between",
+          }}
+        >
+          <Box>
+            <Typography>Visitante responsável</Typography>
+            <Input
+              type="text"
+              disabled={lock_edit}
+              defaultValue={responsavel}
+            />
+          </Box>
+          <Box>
+            <Typography>Instituição</Typography>
+            <Checkbox checked={instituicao} disabled size="medium" />
+          </Box>
         </Box>
+
         <Box>
-          <Typography>Instituição</Typography>
-          <Input type="text" disabled={lock_edit} defaultValue={instituicao} />
-        </Box>
-        <Box>
-          <Typography>Guia</Typography>
-          <Input type="text" defaultValue={guia} />{" "}
-          {/* TODO: Fazer uma forma rápida de salvar o guia designado */}
-          <SaveIcon/>
-          {/* TODO: fazer este botão salvar o Guia do horário específico */}
+          <GuiaList guiaList={guiaList} defaultGuia={visitaData.guia} onClick={fastSaveGuia}/>
         </Box>
         <Box>
           <Typography>Observações</Typography>
